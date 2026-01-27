@@ -11,11 +11,11 @@
                 extend: {
                     colors: {
                         slate: {
-                            850: '#1e293b',
-                            900: '#0f172a',
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
                         },
-                        primary: '#3b82f6',
-                        accent: '#8b5cf6'
+                        primary: '#2563eb',
+                        accent: '#7c3aed'
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
@@ -29,40 +29,41 @@
     <style>
         body { font-family: 'Inter', sans-serif; }
         .glass-card {
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
         }
         .gradient-text {
-            background: linear-gradient(to right, #60a5fa, #a78bfa);
+            background: linear-gradient(to right, #2563eb, #7c3aed);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
     </style>
 </head>
-<body class="bg-slate-900 text-slate-100 antialiased selection:bg-primary selection:text-white">
+<body class="bg-slate-50 text-gray-900 antialiased selection:bg-primary selection:text-white">
 
     <!-- NAVBAR -->
-    <nav class="fixed w-full z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-200 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
-                <div class="flex-shrink-0 font-bold text-xl tracking-tighter">
+                <div class="flex-shrink-0 font-bold text-xl tracking-tighter text-gray-900">
                     ITRAT<span class="text-primary">RAHMAN</span>
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#about" class="hover:text-primary transition px-3 py-2 rounded-md text-sm font-medium">About</a>
-                        <a href="#skills" class="hover:text-primary transition px-3 py-2 rounded-md text-sm font-medium">Skills</a>
-                        <a href="#projects" class="hover:text-primary transition px-3 py-2 rounded-md text-sm font-medium">Projects</a>
-                        <a href="#experience" class="hover:text-primary transition px-3 py-2 rounded-md text-sm font-medium">Experience</a>
-                        <a href="#education" class="hover:text-primary transition px-3 py-2 rounded-md text-sm font-medium">Education</a>
-                        <a href="#talks" class="hover:text-primary transition px-3 py-2 rounded-md text-sm font-medium">Talks</a>
-                        <a href="#certifications" class="hover:text-primary transition px-3 py-2 rounded-md text-sm font-medium">Certifications</a>
-                        <a href="#testimonials" class="hover:text-primary transition px-3 py-2 rounded-md text-sm font-medium">Recommendations</a>
+                        <a href="#about" class="text-gray-700 hover:text-primary transition px-3 py-2 rounded-md text-sm font-medium">About</a>
+                        <a href="#skills" class="text-gray-700 hover:text-primary transition px-3 py-2 rounded-md text-sm font-medium">Skills</a>
+                        <a href="#projects" class="text-gray-700 hover:text-primary transition px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+                        <a href="#experience" class="text-gray-700 hover:text-primary transition px-3 py-2 rounded-md text-sm font-medium">Experience</a>
+                        <a href="#education" class="text-gray-700 hover:text-primary transition px-3 py-2 rounded-md text-sm font-medium">Education</a>
+                        <a href="#talks" class="text-gray-700 hover:text-primary transition px-3 py-2 rounded-md text-sm font-medium">Talks</a>
+                        <a href="#certifications" class="text-gray-700 hover:text-primary transition px-3 py-2 rounded-md text-sm font-medium">Certifications</a>
+                        <a href="#testimonials" class="text-gray-700 hover:text-primary transition px-3 py-2 rounded-md text-sm font-medium">Recommendations</a>
                     </div>
                 </div>
                 <div class="flex items-center gap-3">
-                    <a href="https://docs.google.com/document/d/16YytFdLL9KPsxp9QJlrrrPmlk7QWv-HqCUW2brRMmBE/edit?usp=drive_link" class="hidden sm:inline-flex glass-card px-4 py-2 rounded-full text-xs font-semibold hover:bg-slate-800 transition" target="_blank" rel="noopener noreferrer">
+                    <a href="https://docs.google.com/document/d/16YytFdLL9KPsxp9QJlrrrPmlk7QWv-HqCUW2brRMmBE/edit?usp=drive_link" class="hidden sm:inline-flex glass-card px-4 py-2 rounded-full text-xs font-semibold text-gray-700 hover:bg-gray-100 transition" target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-file-pdf mr-2"></i>Download CV
                     </a>
                     <a href="mailto:rahmanitrat@gmail.com" class="bg-primary hover:bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-bold transition">
@@ -86,14 +87,14 @@
                     Relocatable across US
                 </span>
             </div>
-            <h1 class="text-5xl md:text-6xl font-bold leading-tight">
+            <h1 class="text-5xl md:text-6xl font-bold leading-tight text-gray-900">
                 Engineering <br>
                 <span class="gradient-text">Intelligent Futures</span>
             </h1>
-            <p class="text-slate-300 text-base leading-relaxed">
+            <p class="text-gray-700 text-base leading-relaxed">
                 I am a <span class="font-semibold">Senior AI Engineer/Data Scientist</span> with over <span class="font-semibold">9 years</span> of technical experience with expertise in Computer Vision, NLP, LLM, GenAI, Chatbot, Agentic AI, MLOps, Cloud Technologies, Big Data Analytics, and Data Science. I have extensive <span class="font-semibold">AI/Data product development</span> experience; transformed pet projects into startup & SAAS products; wore multiple hats and worked beyond corporate boundaries for product launches, attended client meetings to pitch products.
             </p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-300">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-gray-700">
                 <div class="flex items-center gap-2">
                     <i class="fas fa-university text-accent"></i>
                     <span>UCL MEng, First Class Honours (All 4 years)</span>
@@ -113,8 +114,8 @@
             </div>
 
             <div class="glass-card p-4 rounded-2xl mt-2">
-                <h3 class="text-sm font-semibold mb-2 text-slate-100 tracking-wide uppercase">Skills Summary</h3>
-                <ul class="text-xs sm:text-sm text-slate-300 space-y-1.5 list-disc list-inside">
+                <h3 class="text-sm font-semibold mb-2 text-gray-900 tracking-wide uppercase">Skills Summary</h3>
+                <ul class="text-xs sm:text-sm text-gray-700 space-y-1.5 list-disc list-inside">
                     <li><strong>Data Science/Machine Learning:</strong> linear algebra, statistics, algorithms & data structures, data visualisation, A/B testing, classical machine learning, deep learning, SQL, churn Analysis, time series forecasting, natural language processing, named entity recognition
                     </li>
                     <li><strong>GenAI/AI Agents:</strong> embeddings, semantic search,transformer model, LLM, Diffusion, RAG, vector database, GAN, GenAI, agents, chatbot, machine translation, speech recognition
@@ -127,151 +128,151 @@
             </div>
 
             <div class="pt-4 flex flex-wrap gap-4">
-                <a href="https://github.com/itratrahman" target="_blank" class="glass-card px-6 py-3 rounded-lg hover:bg-slate-800 transition flex items-center gap-2">
+                <a href="https://github.com/itratrahman" target="_blank" class="glass-card px-6 py-3 rounded-lg hover:bg-gray-100 transition flex items-center gap-2 text-gray-700">
                     <i class="fab fa-github text-xl"></i> GitHub
                 </a>
-                <a href="https://linkedin.com/in/itratrahman" target="_blank" class="glass-card px-6 py-3 rounded-lg hover:bg-slate-800 transition flex items-center gap-2">
+                <a href="https://linkedin.com/in/itratrahman" target="_blank" class="glass-card px-6 py-3 rounded-lg hover:bg-gray-100 transition flex items-center gap-2 text-gray-700">
                     <i class="fab fa-linkedin text-xl"></i> LinkedIn
                 </a>
-                <a href="https://docs.google.com/document/d/1oNbLlHdMvmbokG68S_eV-a0iEZwsJL6AnEls6lPbZVE/edit?usp=drive_link" target="_blank" class="glass-card px-6 py-3 rounded-lg hover:bg-slate-800 transition flex items-center gap-2">
+                <a href="https://docs.google.com/document/d/1oNbLlHdMvmbokG68S_eV-a0iEZwsJL6AnEls6lPbZVE/edit?usp=drive_link" target="_blank" class="glass-card px-6 py-3 rounded-lg hover:bg-gray-100 transition flex items-center gap-2 text-gray-700">
                 <i class="fas fa-file-alt text-xl"></i> Portfolio
                 </a>
             </div>
         </div>
         <div class="md:w-1/2 flex justify-center relative">
-            <div class="absolute inset-0 bg-primary opacity-20 blur-3xl rounded-full"></div>
-            <img src="https://github.com/itratrahman/itratrahman.github.io/blob/main/profile_pic.jpg?raw=true" alt="Itrat Rahman" class="relative w-80 h-80 md:w-96 md:h-96 rounded-full object-cover border-4 border-slate-800 shadow-2xl grayscale hover:grayscale-0 transition duration-500">
+            <div class="absolute inset-0 bg-primary opacity-10 blur-3xl rounded-full"></div>
+            <img src="https://github.com/itratrahman/itratrahman.github.io/blob/main/profile_pic.jpg?raw=true" alt="Itrat Rahman" class="relative w-80 h-80 md:w-96 md:h-96 rounded-full object-cover border-4 border-gray-200 shadow-2xl grayscale hover:grayscale-0 transition duration-500">
         </div>
     </section>
 
     <!-- METRICS STRIP -->
-    <section class="border-y border-slate-800 bg-slate-850/50">
+    <section class="border-y border-gray-200 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                 <div>
-                    <div class="text-3xl font-bold text-white">9+ Years</div>
-                    <div class="text-sm text-slate-400">End-to-End AI &amp; Data Experience</div>
+                    <div class="text-3xl font-bold text-gray-900">9+ Years</div>
+                    <div class="text-sm text-gray-600">End-to-End AI &amp; Data Experience</div>
                 </div>
                 <div>
-                    <div class="text-3xl font-bold text-white">100M+</div>
-                    <div class="text-sm text-slate-400">Records Processed Monthly in Pipelines</div>
+                    <div class="text-3xl font-bold text-gray-900">100M+</div>
+                    <div class="text-sm text-gray-600">Records Processed Monthly in Pipelines</div>
                 </div>
                 <div>
-                    <div class="text-3xl font-bold text-white">99.5%</div>
-                    <div class="text-sm text-slate-400">Face Recognition Accuracy (Custom Dataset)</div>
+                    <div class="text-3xl font-bold text-gray-900">99.5%</div>
+                    <div class="text-sm text-gray-600">Face Recognition Accuracy (Custom Dataset)</div>
                 </div>
                 <div>
-                    <div class="text-3xl font-bold text-white">5–10x</div>
-                    <div class="text-sm text-slate-400">Boost in Enterprise Research Productivity</div>
+                    <div class="text-3xl font-bold text-gray-900">5–10x</div>
+                    <div class="text-sm text-gray-600">Boost in Enterprise Research Productivity</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- SKILLS -->
-    <section id="skills" class="py-20 bg-slate-900">
+    <section id="skills" class="py-20 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold mb-12 text-center"><span class="text-primary">///</span> Technical Arsenal</h2>
+            <h2 class="text-3xl font-bold mb-12 text-center text-gray-900"><span class="text-primary">///</span> Technical Arsenal</h2>
 
             <div class="grid md:grid-cols-3 gap-8 mb-10">
                 <!-- GenAI & LLM -->
                 <div class="glass-card p-8 rounded-2xl hover:-translate-y-2 transition duration-300">
-                    <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fas fa-brain text-blue-400 text-2xl"></i>
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-brain text-blue-600 text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">GenAI, LLMs &amp; Agentic AI</h3>
-                    <p class="text-slate-400 text-sm mb-4">embeddings, semantic search, transformer model, LLM, Diffusion, RAG, vector database, GAN, GenAI, agents, chatbot, machine translation, speech recognition</p>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">GenAI, LLMs &amp; Agentic AI</h3>
+                    <p class="text-gray-600 text-sm mb-4">embeddings, semantic search, transformer model, LLM, Diffusion, RAG, vector database, GAN, GenAI, agents, chatbot, machine translation, speech recognition</p>
                     <div class="flex flex-wrap gap-2 text-[11px]">
-                        <span class="px-2 py-1 bg-slate-800 rounded text-blue-200">Hugging Face</span>
-                        <span class="px-2 py-1 bg-slate-800 rounded text-blue-200">OpenAI API / ChatGPT</span>
-                        <span class="px-2 py-1 bg-slate-800 rounded text-blue-200">GPT action</span>
-                        <span class="px-2 py-1 bg-slate-800 rounded text-blue-200">LangChain / LangGraph</span>
-                        <span class="px-2 py-1 bg-slate-800 rounded text-blue-200">Llama / Llama index</span>
-                        <span class="px-2 py-1 bg-slate-800 rounded text-blue-200">Vector DBs (Pinecone, Chroma, Weaviate)</span>
+                        <span class="px-2 py-1 bg-blue-50 rounded text-blue-700 border border-blue-200">Hugging Face</span>
+                        <span class="px-2 py-1 bg-blue-50 rounded text-blue-700 border border-blue-200">OpenAI API / ChatGPT</span>
+                        <span class="px-2 py-1 bg-blue-50 rounded text-blue-700 border border-blue-200">GPT action</span>
+                        <span class="px-2 py-1 bg-blue-50 rounded text-blue-700 border border-blue-200">LangChain / LangGraph</span>
+                        <span class="px-2 py-1 bg-blue-50 rounded text-blue-700 border border-blue-200">Llama / Llama index</span>
+                        <span class="px-2 py-1 bg-blue-50 rounded text-blue-700 border border-blue-200">Vector DBs (Pinecone, Chroma, Weaviate)</span>
                     </div>
                 </div>
 
                 <!-- Computer Vision -->
                 <div class="glass-card p-8 rounded-2xl hover:-translate-y-2 transition duration-300">
-                    <div class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fas fa-eye text-purple-400 text-2xl"></i>
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-eye text-purple-600 text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Computer Vision &amp; Imaging</h3>
-                    <p class="text-slate-400 text-sm mb-4">Binary Morphology, Perspective/Affine Transformation, Edge Detection, OCR, object segmentation, object detection, facial recognition, video generation</p>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Computer Vision &amp; Imaging</h3>
+                    <p class="text-gray-600 text-sm mb-4">Binary Morphology, Perspective/Affine Transformation, Edge Detection, OCR, object segmentation, object detection, facial recognition, video generation</p>
                     <div class="flex flex-wrap gap-2 text-[11px]">
-                        <span class="px-2 py-1 bg-slate-800 rounded text-purple-200">TensorFlow / Keras</span>
-                        <span class="px-2 py-1 bg-slate-800 rounded text-purple-200">PyTorch</span>
-                        <span class="px-2 py-1 bg-slate-800 rounded text-purple-200">OpenCV</span>
-                        <span class="px-2 py-1 bg-slate-800 rounded text-purple-200">Optuna / Keras Tuner</span>
+                        <span class="px-2 py-1 bg-purple-50 rounded text-purple-700 border border-purple-200">TensorFlow / Keras</span>
+                        <span class="px-2 py-1 bg-purple-50 rounded text-purple-700 border border-purple-200">PyTorch</span>
+                        <span class="px-2 py-1 bg-purple-50 rounded text-purple-700 border border-purple-200">OpenCV</span>
+                        <span class="px-2 py-1 bg-purple-50 rounded text-purple-700 border border-purple-200">Optuna / Keras Tuner</span>
                     </div>
                 </div>
 
                 <!-- Data Science & Analytics -->
                 <div class="glass-card p-8 rounded-2xl hover:-translate-y-2 transition duration-300">
-                    <div class="w-12 h-12 bg-emerald-500/20 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fas fa-chart-line text-emerald-400 text-2xl"></i>
+                    <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-emerald-600 text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Data Science &amp; Analytics</h3>
-                    <p class="text-slate-400 text-sm mb-4">linear algebra, statistics, algorithms & data structures, data visualisation, A/B testing, classical machine learning, deep learning, SQL, churn Analysis, time series forecasting, natural language processing, named entity recognition</p>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Data Science &amp; Analytics</h3>
+                    <p class="text-gray-600 text-sm mb-4">linear algebra, statistics, algorithms & data structures, data visualisation, A/B testing, classical machine learning, deep learning, SQL, churn Analysis, time series forecasting, natural language processing, named entity recognition</p>
                     <div class="flex flex-wrap gap-2 text-[11px]">
-                        <span class="px-2 py-1 bg-slate-800 rounded text-emerald-200">Python / SQL</span>
-                        <span class="px-2 py-1 bg-slate-800 rounded text-emerald-200">NumPy / pandas / SciPy</span>
-                        <span class="px-2 py-1 bg-slate-800 rounded text-emerald-200">Matplotlib / Seaborn / Bokeh / Folium</span>
-                        <span class="px-2 py-1 bg-slate-800 rounded text-emerald-200">Scikit-Learn / XGBoost / nltk</span>
-                        <span class="px-2 py-1 bg-slate-800 rounded text-emerald-200">Looker Studio / Tableau</span>
+                        <span class="px-2 py-1 bg-emerald-50 rounded text-emerald-700 border border-emerald-200">Python / SQL</span>
+                        <span class="px-2 py-1 bg-emerald-50 rounded text-emerald-700 border border-emerald-200">NumPy / pandas / SciPy</span>
+                        <span class="px-2 py-1 bg-emerald-50 rounded text-emerald-700 border border-emerald-200">Matplotlib / Seaborn / Bokeh / Folium</span>
+                        <span class="px-2 py-1 bg-emerald-50 rounded text-emerald-700 border border-emerald-200">Scikit-Learn / XGBoost / nltk</span>
+                        <span class="px-2 py-1 bg-emerald-50 rounded text-emerald-700 border border-emerald-200">Looker Studio / Tableau</span>
                     </div>
                 </div>
 
                 <!-- Data Engineering & Big Data -->
                 <div class="glass-card p-8 rounded-2xl hover:-translate-y-2 transition duration-300">
-                    <div class="w-12 h-12 bg-yellow-500/20 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fas fa-database text-yellow-300 text-2xl"></i>
+                    <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-database text-yellow-700 text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Data Engineering &amp; Big Data</h3>
-                    <p class="text-slate-400 text-sm mb-4">Designing resilient, high-throughput data flows that feed analytics and ML.</p>
-                    <ul class="text-slate-300 text-xs space-y-1 mb-4 list-disc list-inside">
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Data Engineering &amp; Big Data</h3>
+                    <p class="text-gray-600 text-sm mb-4">Designing resilient, high-throughput data flows that feed analytics and ML.</p>
+                    <ul class="text-gray-700 text-xs space-y-1 mb-4 list-disc list-inside">
                         <li>ETL/ELT pipelines from MySQL, MongoDB &amp; APIs into BigQuery.</li>
                         <li>Distributed processing with Spark/Dask &amp; Dataflow.</li>
                         <li>Geospatial search and customer 360 profile pipelines.</li>
                     </ul>
                     <div class="flex flex-wrap gap-2 text-[11px]">
-                        <span class="px-2 py-1 bg-slate-800 rounded text-yellow-100">BigQuery</span>
-                        <span class="px-2 py-1 bg-slate-800 rounded text-yellow-100">Apache Spark / Dask</span>
-                        <span class="px-2 py-1 bg-slate-800 rounded text-yellow-100">MySQL / PostgreSQL / MongoDB</span>
+                        <span class="px-2 py-1 bg-yellow-50 rounded text-yellow-800 border border-yellow-200">BigQuery</span>
+                        <span class="px-2 py-1 bg-yellow-50 rounded text-yellow-800 border border-yellow-200">Apache Spark / Dask</span>
+                        <span class="px-2 py-1 bg-yellow-50 rounded text-yellow-800 border border-yellow-200">MySQL / PostgreSQL / MongoDB</span>
                     </div>
                 </div>
 
                 <!-- MLOps & Cloud -->
                 <div class="glass-card p-8 rounded-2xl hover:-translate-y-2 transition duration-300">
-                    <div class="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fas fa-server text-green-400 text-2xl"></i>
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-server text-green-700 text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">MLOps, Cloud &amp; Deployment</h3>
-                    <p class="text-slate-400 text-sm mb-4">automating ML lifecycle using MLflow, orchestrating DataOps & MLOps pipeline using Airflow, automating deployment using CI/CD pipeline via Jenkins</p>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">MLOps, Cloud &amp; Deployment</h3>
+                    <p class="text-gray-600 text-sm mb-4">automating ML lifecycle using MLflow, orchestrating DataOps & MLOps pipeline using Airflow, automating deployment using CI/CD pipeline via Jenkins</p>
                     <div class="flex flex-wrap gap-2 text-[11px]">
-                        <span class="px-2 py-1 bg-slate-800 rounded text-green-200">GCP / Azure / AWS</span>
-                        <span class="px-2 py-1 bg-slate-800 rounded text-green-200">Docker / Docker-compose</span>
-                        <span class="px-2 py-1 bg-slate-800 rounded text-green-200">FastAPI / Flask</span>
-                        <span class="px-2 py-1 bg-slate-800 rounded text-green-200">Airflow / MLflow</span>
-                        <span class="px-2 py-1 bg-slate-800 rounded text-green-200">CI/CD (Jenkins)</span>
-                        <span class="px-2 py-1 bg-slate-800 rounded text-green-200">Git / GitHub / Linux / Bash / cron</span>
+                        <span class="px-2 py-1 bg-green-50 rounded text-green-800 border border-green-200">GCP / Azure / AWS</span>
+                        <span class="px-2 py-1 bg-green-50 rounded text-green-800 border border-green-200">Docker / Docker-compose</span>
+                        <span class="px-2 py-1 bg-green-50 rounded text-green-800 border border-green-200">FastAPI / Flask</span>
+                        <span class="px-2 py-1 bg-green-50 rounded text-green-800 border border-green-200">Airflow / MLflow</span>
+                        <span class="px-2 py-1 bg-green-50 rounded text-green-800 border border-green-200">CI/CD (Jenkins)</span>
+                        <span class="px-2 py-1 bg-green-50 rounded text-green-800 border border-green-200">Git / GitHub / Linux / Bash / cron</span>
                     </div>
                 </div>
 
                 <!-- Power Skills & Domains -->
                 <div class="glass-card p-8 rounded-2xl hover:-translate-y-2 transition duration-300">
-                    <div class="w-12 h-12 bg-pink-500/20 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fas fa-users text-pink-300 text-2xl"></i>
+                    <div class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-users text-pink-700 text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Power Skills &amp; Domains</h3>
-                    <p class="text-slate-400 text-sm mb-4">English & Bengali Communication, PPT presentation, Client & Stakeholder Communication, Team Management, Project Management using Jira</p>
-                    <p class="text-slate-400 text-sm mb-4"><strong>Domain Knowledge:</strong> fintech, sms, telecom, facial image, pedestrian image, document OCR/parsing/inference, merchant onboarding, eKYC, crm, chemical industry, research & patent literature, robotics, embedded systems</p>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Power Skills &amp; Domains</h3>
+                    <p class="text-gray-600 text-sm mb-4">English & Bengali Communication, PPT presentation, Client & Stakeholder Communication, Team Management, Project Management using Jira</p>
+                    <p class="text-gray-600 text-sm mb-4"><strong>Domain Knowledge:</strong> fintech, sms, telecom, facial image, pedestrian image, document OCR/parsing/inference, merchant onboarding, eKYC, crm, chemical industry, research & patent literature, robotics, embedded systems</p>
                     <div class="flex flex-wrap gap-2 text-[11px]">
-                        <span class="px-2 py-1 bg-slate-800 rounded text-pink-100">English &amp; Bengali</span>
-                        <span class="px-2 py-1 bg-slate-800 rounded text-pink-100">PPT Presentation</span>
-                        <span class="px-2 py-1 bg-slate-800 rounded text-pink-100">Client Communication</span>
-                        <span class="px-2 py-1 bg-slate-800 rounded text-pink-100">Team Management</span>
-                        <span class="px-2 py-1 bg-slate-800 rounded text-pink-100">Project Management (Jira)</span>
+                        <span class="px-2 py-1 bg-pink-50 rounded text-pink-800 border border-pink-200">English &amp; Bengali</span>
+                        <span class="px-2 py-1 bg-pink-50 rounded text-pink-800 border border-pink-200">PPT Presentation</span>
+                        <span class="px-2 py-1 bg-pink-50 rounded text-pink-800 border border-pink-200">Client Communication</span>
+                        <span class="px-2 py-1 bg-pink-50 rounded text-pink-800 border border-pink-200">Team Management</span>
+                        <span class="px-2 py-1 bg-pink-50 rounded text-pink-800 border border-pink-200">Project Management (Jira)</span>
                     </div>
                     </div>
                 </div>
@@ -280,17 +281,17 @@
     </section>
 
     <!-- PROJECTS -->
-    <section id="projects" class="py-20 bg-slate-850">
+    <section id="projects" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold mb-12"><span class="text-primary">///</span> Featured Projects &amp; Products</h2>
+            <h2 class="text-3xl font-bold mb-12 text-gray-900"><span class="text-primary">///</span> Featured Projects &amp; Products</h2>
 
             <div class="space-y-12">
                 <!-- Agentic AI for Enterprise -->
                 <div class="glass-card p-8 md:p-12 rounded-3xl flex flex-col md:flex-row gap-8 items-start border-l-4 border-primary">
                     <div class="flex-1 space-y-4">
-                        <h3 class="text-2xl font-bold text-white">Agentic AI for Enterprise Knowledge &amp; CRM</h3>
-                        <p class="text-slate-400">Designed RAG-based agentic chatbots and Custom GPTs on top of <span class="font-semibold">SharePoint</span> and <span class="font-semibold">Microsoft Dynamics 365</span> for a global chemical manufacturer.</p>
-                        <ul class="text-sm text-slate-300 space-y-2">
+                        <h3 class="text-2xl font-bold text-gray-900">Agentic AI for Enterprise Knowledge &amp; CRM</h3>
+                        <p class="text-gray-600">Designed RAG-based agentic chatbots and Custom GPTs on top of <span class="font-semibold">SharePoint</span> and <span class="font-semibold">Microsoft Dynamics 365</span> for a global chemical manufacturer.</p>
+                        <ul class="text-sm text-gray-700 space-y-2">
                             <li class="flex items-start gap-2"><i class="fas fa-check text-primary mt-1"></i>
                                 Built Custom GPTs with GPT Actions backed by Azure Functions that search documents via Microsoft Graph, summarise findings and answer complex questions.</li>
                             <li class="flex items-start gap-2"><i class="fas fa-check text-primary mt-1"></i>
@@ -308,12 +309,12 @@
                 </div>
 
                 <!-- Resume Intelligence Platform -->
-                <div class="glass-card p-8 md:p-12 rounded-3xl flex flex-col md:flex-row gap-8 items-start border-l-4 border-emerald-400">
+                <div class="glass-card p-8 md:p-12 rounded-3xl flex flex-col md:flex-row gap-8 items-start border-l-4 border-emerald-500">
                     <div class="flex-1 space-y-4">
-                        <h3 class="text-2xl font-bold text-white">Multimodal Resume Intelligence Platform</h3>
-                        <p class="text-slate-400">End-to-end platform that parses, embeds and ranks resumes to match opportunities with top applicants.</p>
-                        <ul class="text-sm text-slate-300 space-y-2">
-                            <li class="flex items-start gap-2"><i class="fas fa-check text-emerald-400 mt-1"></i>
+                        <h3 class="text-2xl font-bold text-gray-900">Multimodal Resume Intelligence Platform</h3>
+                        <p class="text-gray-600">End-to-end platform that parses, embeds and ranks resumes to match opportunities with top applicants.</p>
+                        <ul class="text-sm text-gray-700 space-y-2">
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-emerald-600 mt-1"></i>
                                 Built GenAI-based resume parser using GCP Vision API, OpenCV and LangChain to extract key entities with ~99% accuracy.</li>
                             <li class="flex items-start gap-2"><i class="fas fa-check text-emerald-400 mt-1"></i>
                                 Trained multimodal models (text + resume layout) with CLIP-style losses and LoRA/QLoRA to support resume clustering, ranking and semantic search.</li>
@@ -321,10 +322,10 @@
                                 Delivered a conversational RAG bot over the resume corpus that achieved ~95% accuracy in LLM‑assisted evaluation.</li>
                         </ul>
                         <div class="pt-4 flex flex-wrap gap-2 text-xs font-mono">
-                            <span class="text-emerald-300 bg-emerald-500/10 px-2 py-1 rounded">LLM</span>
-                            <span class="text-emerald-300 bg-emerald-500/10 px-2 py-1 rounded">GCP Vision</span>
-                            <span class="text-emerald-300 bg-emerald-500/10 px-2 py-1 rounded">LangChain</span>
-                            <span class="text-emerald-300 bg-emerald-500/10 px-2 py-1 rounded">Pinecone</span>
+                            <span class="text-emerald-700 bg-emerald-50 px-2 py-1 rounded border border-emerald-200">LLM</span>
+                            <span class="text-emerald-700 bg-emerald-50 px-2 py-1 rounded border border-emerald-200">GCP Vision</span>
+                            <span class="text-emerald-700 bg-emerald-50 px-2 py-1 rounded border border-emerald-200">LangChain</span>
+                            <span class="text-emerald-700 bg-emerald-50 px-2 py-1 rounded border border-emerald-200">Pinecone</span>
                         </div>
                     </div>
                 </div>
@@ -332,9 +333,9 @@
                 <!-- DocChecker -->
                 <div class="glass-card p-8 md:p-12 rounded-3xl flex flex-col md:flex-row gap-8 items-start border-l-4 border-accent">
                     <div class="flex-1 space-y-4">
-                        <h3 class="text-2xl font-bold text-white">DocChecker.ai &amp; eKYC Document Intelligence</h3>
-                        <p class="text-slate-400">SaaS platform for automated document verification used in large‑scale merchant onboarding.</p>
-                        <ul class="text-sm text-slate-300 space-y-2">
+                        <h3 class="text-2xl font-bold text-gray-900">DocChecker.ai &amp; eKYC Document Intelligence</h3>
+                        <p class="text-gray-600">SaaS platform for automated document verification used in large‑scale merchant onboarding.</p>
+                        <ul class="text-sm text-gray-700 space-y-2">
                             <li class="flex items-start gap-2"><i class="fas fa-check text-accent mt-1"></i>
                                 Trained custom object detection &amp; resemblance models with up to 98% mAP and 97% F1 for ID, trade licence and form verification.</li>
                             <li class="flex items-start gap-2"><i class="fas fa-check text-accent mt-1"></i>
@@ -343,10 +344,10 @@
                                 Containerised services with FastAPI + Docker, wired into CI/CD and MLOps pipelines with Airflow and BigQuery-backed monitoring dashboards.</li>
                         </ul>
                         <div class="pt-4 flex flex-wrap gap-2 text-xs font-mono">
-                            <span class="text-accent bg-accent/10 px-2 py-1 rounded">Computer Vision</span>
-                            <span class="text-accent bg-accent/10 px-2 py-1 rounded">FastAPI</span>
-                            <span class="text-accent bg-accent/10 px-2 py-1 rounded">Docker</span>
-                            <span class="text-accent bg-accent/10 px-2 py-1 rounded">Airflow</span>
+                            <span class="text-purple-700 bg-purple-50 px-2 py-1 rounded border border-purple-200">Computer Vision</span>
+                            <span class="text-purple-700 bg-purple-50 px-2 py-1 rounded border border-purple-200">FastAPI</span>
+                            <span class="text-purple-700 bg-purple-50 px-2 py-1 rounded border border-purple-200">Docker</span>
+                            <span class="text-purple-700 bg-purple-50 px-2 py-1 rounded border border-purple-200">Airflow</span>
                         </div>
                     </div>
                 </div>
@@ -354,10 +355,10 @@
                 <!-- Multi-Face Recognition -->
                 <div class="glass-card p-8 md:p-12 rounded-3xl flex flex-col md:flex-row gap-8 items-start border-l-4 border-green-500">
                     <div class="flex-1 space-y-4">
-                        <h3 class="text-2xl font-bold text-white">Multi-Face Recognition &amp; Intrusion Detection</h3>
-                        <p class="text-slate-400">Real-time face recognition and perimeter monitoring solutions spun off into a dedicated startup unit (SSL Sentinel).</p>
-                        <ul class="text-sm text-slate-300 space-y-2">
-                            <li class="flex items-start gap-2"><i class="fas fa-check text-green-500 mt-1"></i>
+                        <h3 class="text-2xl font-bold text-gray-900">Multi-Face Recognition &amp; Intrusion Detection</h3>
+                        <p class="text-gray-600">Real-time face recognition and perimeter monitoring solutions spun off into a dedicated startup unit (SSL Sentinel).</p>
+                        <ul class="text-sm text-gray-700 space-y-2">
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-green-600 mt-1"></i>
                                 Developed multi-face recognition pipelines that identify 4–8 faces per frame with ~99.5% accuracy on under‑represented demographics.</li>
                             <li class="flex items-start gap-2"><i class="fas fa-check text-green-500 mt-1"></i>
                                 Implemented edge deployments on Jetson Nano for intrusion detection over polygon zones with GPU-accelerated inference.</li>
@@ -365,20 +366,20 @@
                                 Built web apps &amp; notification backends for real-time alerts and panel visualisation.</li>
                         </ul>
                         <div class="pt-4 flex flex-wrap gap-2 text-xs font-mono">
-                            <span class="text-green-400 bg-green-500/10 px-2 py-1 rounded">TensorFlow</span>
-                            <span class="text-green-400 bg-green-500/10 px-2 py-1 rounded">Jetson Nano</span>
-                            <span class="text-green-400 bg-green-500/10 px-2 py-1 rounded">Edge AI</span>
+                            <span class="text-green-700 bg-green-50 px-2 py-1 rounded border border-green-200">TensorFlow</span>
+                            <span class="text-green-700 bg-green-50 px-2 py-1 rounded border border-green-200">Jetson Nano</span>
+                            <span class="text-green-700 bg-green-50 px-2 py-1 rounded border border-green-200">Edge AI</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Forecasting & Geo-Analytics -->
-                <div class="glass-card p-8 md:p-12 rounded-3xl flex flex-col md:flex-row gap-8 items-start border-l-4 border-yellow-400">
+                <div class="glass-card p-8 md:p-12 rounded-3xl flex flex-col md:flex-row gap-8 items-start border-l-4 border-yellow-500">
                     <div class="flex-1 space-y-4">
-                        <h3 class="text-2xl font-bold text-white">Forecasting, Churn &amp; Geo-Analytics</h3>
-                        <p class="text-slate-400">Analytics engines used by fintech &amp; SaaS teams to plan campaigns, understand churn and optimise field operations.</p>
-                        <ul class="text-sm text-slate-300 space-y-2">
-                            <li class="flex items-start gap-2"><i class="fas fa-check text-yellow-400 mt-1"></i>
+                        <h3 class="text-2xl font-bold text-gray-900">Forecasting, Churn &amp; Geo-Analytics</h3>
+                        <p class="text-gray-600">Analytics engines used by fintech &amp; SaaS teams to plan campaigns, understand churn and optimise field operations.</p>
+                        <ul class="text-sm text-gray-700 space-y-2">
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-yellow-700 mt-1"></i>
                                 AutoML forecasting on payment gateway transactions with Vertex AI + BigQuery, driving ~7% uplift in campaign-season usage.</li>
                             <li class="flex items-start gap-2"><i class="fas fa-check text-yellow-400 mt-1"></i>
                                 Route optimisation engine that reduces manual area scanning by hundreds of hours and saves ~$500–$700 per area.</li>
@@ -386,17 +387,17 @@
                                 Built churn detection logic and log-extraction pipelines for enterprise ChatGPT usage with automated email reports.</li>
                         </ul>
                         <div class="pt-4 flex flex-wrap gap-2 text-xs font-mono">
-                            <span class="text-yellow-300 bg-yellow-500/10 px-2 py-1 rounded">Vertex AI</span>
-                            <span class="text-yellow-300 bg-yellow-500/10 px-2 py-1 rounded">BigQuery</span>
-                            <span class="text-yellow-300 bg-yellow-500/10 px-2 py-1 rounded">Geo‑analytics</span>
+                            <span class="text-yellow-800 bg-yellow-50 px-2 py-1 rounded border border-yellow-200">Vertex AI</span>
+                            <span class="text-yellow-800 bg-yellow-50 px-2 py-1 rounded border border-yellow-200">BigQuery</span>
+                            <span class="text-yellow-800 bg-yellow-50 px-2 py-1 rounded border border-yellow-200">Geo‑analytics</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Selected Projects -->
-                <div class="glass-card p-8 md:p-12 rounded-3xl flex flex-col gap-4 border-l-4 border-slate-500">
-                    <h3 class="text-2xl font-bold text-white">Selected Projects</h3>
-                    <ul class="text-sm text-slate-300 space-y-3">
+                <div class="glass-card p-8 md:p-12 rounded-3xl flex flex-col gap-4 border-l-4 border-gray-400">
+                    <h3 class="text-2xl font-bold text-gray-900">Selected Projects</h3>
+                    <ul class="text-sm text-gray-700 space-y-3">
                         <li><span class="font-semibold">Document Verification Application of EU Driving License</span> (<a href="https://github.com/itratrahman/document_verification" target="_blank" class="text-primary hover:underline">Repository</a>) - Built a production-ready AI document verification system with 3-stage pipeline (EfficientNet-B0 binary classifier → PaddleOCR marker validation → RetinaFace detection), achieving 95% end-to-end accuracy and <2s inference. Trained models on 3,866 images (97% validation F1) with Optuna hyperparameter optimization and MLflow tracking. Productionized with FastAPI + async MongoDB logging + Docker; implemented thread-safe inference, hot model reloading, and comprehensive health checks with pytest integration.</li>
                         <li><span class="font-semibold">Codebase of ML Training Program</span> (<a href="https://github.com/itratrahman/data_science_training" target="_blank" class="text-primary hover:underline">Repository</a>) - Built a comprehensive data science training curriculum with 50+ Jupyter notebooks covering 7 ML domains; implemented 15+ algorithms from scratch in NumPy (linear/logistic regression, decision trees, KNN, Naive Bayes, PCA). Developed modular ML library with gradient descent optimization, L1/L2 regularization, and utilities for preprocessing, model selection, and evaluation.</li>
                     </ul>
@@ -406,20 +407,20 @@
     </section>
 
     <!-- EXPERIENCE -->
-    <section id="experience" class="py-20 bg-slate-900">
+    <section id="experience" class="py-20 bg-slate-50">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold mb-12 text-center">Professional Journey</h2>
+            <h2 class="text-3xl font-bold mb-12 text-center text-gray-900">Professional Journey</h2>
 
-            <div class="relative border-l border-slate-700 ml-4 space-y-12">
+            <div class="relative border-l border-gray-300 ml-4 space-y-12">
                 <!-- Astute 360 + Ascend -->
                 <div class="mb-10 ml-8 relative">
-                    <div class="absolute -left-10 mt-1.5 w-4 h-4 rounded-full bg-primary border-4 border-slate-900"></div>
+                    <div class="absolute -left-10 mt-1.5 w-4 h-4 rounded-full bg-primary border-4 border-slate-50"></div>
                     <div class="glass-card p-6 rounded-xl">
                         <span class="text-sm text-primary font-mono mb-1 block">Apr 2024 &ndash; Present</span>
-                        <h3 class="text-xl font-bold">Senior Data Scientist</h3>
-                        <h4 class="text-slate-400 mb-2">Astute 360 Corporation, Texas, USA</h4>
-                        <p class="text-slate-400 text-sm mb-3">Astute 360 Corporation is a software consultancy company in Texas, USA that develops inhouse products and outsources consultants on C2C contracts. I worked as a GenAI Data Scientist at Ascend Performance Materials for 7 months.</p>
-                        <ul class="text-slate-300 text-sm space-y-1.5 list-disc list-inside">
+                        <h3 class="text-xl font-bold text-gray-900">Senior Data Scientist</h3>
+                        <h4 class="text-gray-600 mb-2">Astute 360 Corporation, Texas, USA</h4>
+                        <p class="text-gray-600 text-sm mb-3">Astute 360 Corporation is a software consultancy company in Texas, USA that develops inhouse products and outsources consultants on C2C contracts. I worked as a GenAI Data Scientist at Ascend Performance Materials for 7 months.</p>
+                        <ul class="text-gray-700 text-sm space-y-1.5 list-disc list-inside">
                             <li>Built and deployed a RAG-based resume-matching chatbot (GenAI, OpenAI) that retrieves best-fit resumes from user prompts and supports multi-turn conversation, improving resume discovery speed and relevance. Developed an LLM-based resume parser (GCP Vision API, LangChain) to extract and structure key resume fields with 99% extraction accuracy, storing documents and metadata in Pinecone for retrieval. Implemented LLM-assisted evaluation for chatbot answer quality, achieving 95% accuracy on internal evaluation.</li>
                             <li>Trained a bert model using TDSAE training scheme on the corpus of resume text to function as the embedder for the RAG vector search in the aforementioned chatbot.</li>
                             <li>Trained a multimodal model (Hugging face, NVIDIA GPU) on resume images + text using CLIP-style contrastive loss and LoRA/QLoRA fine-tuning to enable downstream tasks such as embedding-based clustering and ranking.</li>
@@ -427,10 +428,10 @@
                             <li>Developed a resume ranking model using linear methods over multimodal inputs + LLM-inferred similarity + LLM-extracted QA metrics to improve candidate ordering.</li>
                         </ul>
                         <div class="mt-4">
-                            <p class="text-slate-400 text-sm mb-2"><strong>Ascend Performance Materials, Texas, USA — Generative AI Data Scientist (C2C contract with Astute 360 Corp.)</strong></p>
-                            <span class="text-sm text-slate-400 font-mono mb-1 block">Mar 2025 – Sep 2025</span>
-                            <p class="text-slate-400 text-sm mb-3">Ascend Performance Materials is the world's largest fully integrated producer of nylon 66 resin. I worked as a GenAI Data Scientist at Ascend on a C2C contract with my parent company, Astute 360 Corp with <strong>Collabera</strong> as the <strong>implementation partner</strong>. My role was to develop generative AI applications on top of enterprise data.</p>
-                            <ul class="text-slate-300 text-sm space-y-1.5 list-disc list-inside">
+                            <p class="text-gray-600 text-sm mb-2"><strong>Ascend Performance Materials, Texas, USA — Generative AI Data Scientist (C2C contract with Astute 360 Corp.)</strong></p>
+                            <span class="text-sm text-gray-600 font-mono mb-1 block">Mar 2025 – Sep 2025</span>
+                            <p class="text-gray-600 text-sm mb-3">Ascend Performance Materials is the world's largest fully integrated producer of nylon 66 resin. I worked as a GenAI Data Scientist at Ascend on a C2C contract with my parent company, Astute 360 Corp with <strong>Collabera</strong> as the <strong>implementation partner</strong>. My role was to develop generative AI applications on top of enterprise data.</p>
+                            <ul class="text-gray-700 text-sm space-y-1.5 list-disc list-inside">
                                 <li>Shipped a SharePoint RAG agent using Custom GPT + GPT Actions with Azure Functions middleware (MS Graph search → targeted extraction → response to GPT), driving 5x–10x faster literature review for R&D stakeholders.</li>
                                 <li>Delivered a Dynamics 365 CRM RAG agent where Custom GPT translates NL questions into OData queries; Azure Functions retrieves via Dataverse API, merges results, and runs QA using OpenAI + code interpreter, improving ad-hoc analytics productivity 1.5x–2x.</li>
                                 <li>Built a spreadsheet-analysis Custom GPT that generates themed business reports with findings + recommendations, improving analyst throughput 5x–10x.</li>
@@ -445,13 +446,13 @@
 
                 <!-- SSL Wireless -->
                 <div class="mb-10 ml-8 relative">
-                    <div class="absolute -left-10 mt-1.5 w-4 h-4 rounded-full bg-slate-500 border-4 border-slate-900"></div>
+                    <div class="absolute -left-10 mt-1.5 w-4 h-4 rounded-full bg-gray-400 border-4 border-slate-50"></div>
                     <div class="glass-card p-6 rounded-xl">
-                        <span class="text-sm text-slate-400 font-mono mb-1 block">Apr 2020 &ndash; Mar 2024</span>
-                        <h3 class="text-xl font-bold">Senior Data Scientist</h3>
-                        <h4 class="text-slate-400 mb-2">SSL Wireless, Dhaka, Bangladesh</h4>
-                        <p class="text-slate-400 text-sm mb-3">SSL Wireless is the leading fintech and software corporation in Bangladesh, recognized as a top fintech company in the country. I was <strong>promoted</strong> to a <strong>senior role</strong> in January 2022 and since then <strong>led, managed, and mentored the next generation of data scientists</strong>.</p>
-                        <ul class="text-slate-300 text-sm space-y-1.5 list-disc list-inside">
+                        <span class="text-sm text-gray-600 font-mono mb-1 block">Apr 2020 &ndash; Mar 2024</span>
+                        <h3 class="text-xl font-bold text-gray-900">Senior Data Scientist</h3>
+                        <h4 class="text-gray-600 mb-2">SSL Wireless, Dhaka, Bangladesh</h4>
+                        <p class="text-gray-600 text-sm mb-3">SSL Wireless is the leading fintech and software corporation in Bangladesh, recognized as a top fintech company in the country. I was <strong>promoted</strong> to a <strong>senior role</strong> in January 2022 and since then <strong>led, managed, and mentored the next generation of data scientists</strong>.</p>
+                        <ul class="text-gray-700 text-sm space-y-1.5 list-disc list-inside">
                             <li>Built an AI document verification system (Computer Vision, TensorFlow, PyTorch, OpenCV, NVIDIA GPU) for online merchant onboarding, improving onboarding efficiency 40%; trained document-scanning object detection models (~98% mAP) and resemblance checking binary classification models (~97% F1). Built OCR-based field extraction/validation with ~95% accuracy, reducing manual checks and improving onboarding quality. Productionized APIs with FastAPI + Docker and Jenkins CI/CD for reliable releases; orchestrated retraining/export with Airflow and implemented inference logging (MongoDB → BigQuery) powering near-real-time Looker Studio monitoring. Packaged the verification stack into a SaaS offering; supported customer pitching and onboarded 2 clients.</li>
                             <li>Built a real-time multi-face recognition platform (Computer Vision, TensorFlow, OpenCV, FastAPI, Docker, NVIDIA GPU) for camera streams; fine-tuned face recognition model for underrepresented faces and reached 99.5% accuracy on a custom test set. Deployed edge components (video streaming + face detection) on Jetson Nano and partnered with the engineering team to deliver real-time notifications plus a facial registration app (TensorFlow.js) that registers varied face poses. Supported creation of a dedicated sister company/startup (SSL Sentinel); contributed to sales pitching and onboarded 8 clients.</li>
                             <li>Implemented an intrusion detection system (Computer Vision, TensorFlow, OpenCV, FastAPI, Docker, NVIDIA GPU) that flags pedestrians crossing polygon boundaries; deployed a pedestrian detector on Jetson Nano and collaborated on a full backend/frontend monitoring panel.</li>
@@ -470,13 +471,13 @@
 
                 <!-- Learners & Yearners -->
                 <div class="mb-10 ml-8 relative">
-                    <div class="absolute -left-10 mt-1.5 w-4 h-4 rounded-full bg-slate-500 border-4 border-slate-900"></div>
+                    <div class="absolute -left-10 mt-1.5 w-4 h-4 rounded-full bg-gray-400 border-4 border-slate-50"></div>
                     <div class="glass-card p-6 rounded-xl">
-                        <span class="text-sm text-slate-400 font-mono mb-1 block">Jan 2017 &ndash; Mar 2020</span>
-                        <h3 class="text-xl font-bold">Data Scientist</h3>
-                        <h4 class="text-slate-400 mb-2">Learners &amp; Yearners, Dhaka, Bangladesh</h4>
-                        <p class="text-slate-400 text-sm mb-3">L&Y is a start-up that aims to develop friendly and animated online courses in AI and machine learning.</p>
-                        <ul class="text-slate-300 text-sm space-y-1.5 list-disc list-inside">
+                        <span class="text-sm text-gray-600 font-mono mb-1 block">Jan 2017 &ndash; Mar 2020</span>
+                        <h3 class="text-xl font-bold text-gray-900">Data Scientist</h3>
+                        <h4 class="text-gray-600 mb-2">Learners &amp; Yearners, Dhaka, Bangladesh</h4>
+                        <p class="text-gray-600 text-sm mb-3">L&Y is a start-up that aims to develop friendly and animated online courses in AI and machine learning.</p>
+                        <ul class="text-gray-700 text-sm space-y-1.5 list-disc list-inside">
                             <li>Designed and delivered an applied ML curriculum with code repositories, slides, and recorded lectures focused on low-level algorithm implementation.</li>
                             <li>Built a Python package implementing core ML algorithms from scratch (Decision Trees, KNN, K-means) and delivered small–medium EDA/predictive projects to reinforce concepts.</li>
                             <li>Taught a 2-month data science bootcamp to 10–15 learners, covering ML fundamentals and hands-on projects.</li>
@@ -487,13 +488,13 @@
 
                 <!-- Southeast Bank -->
                 <div class="mb-10 ml-8 relative">
-                    <div class="absolute -left-10 mt-1.5 w-4 h-4 rounded-full bg-slate-500 border-4 border-slate-900"></div>
+                    <div class="absolute -left-10 mt-1.5 w-4 h-4 rounded-full bg-gray-400 border-4 border-slate-50"></div>
                     <div class="glass-card p-6 rounded-xl">
-                        <span class="text-sm text-slate-400 font-mono mb-1 block">May 2016 &ndash; Aug 2016</span>
-                        <h3 class="text-xl font-bold">Junior Data Scientist</h3>
-                        <h4 class="text-slate-400 mb-2">Southeast Bank Limited, Dhaka, Bangladesh</h4>
-                        <p class="text-slate-400 text-sm mb-3">Southeast Bank Limited is one of the mainstream local banks in Bangladesh.</p>
-                        <ul class="text-slate-300 text-sm space-y-1.5 list-disc list-inside">
+                        <span class="text-sm text-gray-600 font-mono mb-1 block">May 2016 &ndash; Aug 2016</span>
+                        <h3 class="text-xl font-bold text-gray-900">Junior Data Scientist</h3>
+                        <h4 class="text-gray-600 mb-2">Southeast Bank Limited, Dhaka, Bangladesh</h4>
+                        <p class="text-gray-600 text-sm mb-3">Southeast Bank Limited is one of the mainstream local banks in Bangladesh.</p>
+                        <ul class="text-gray-700 text-sm space-y-1.5 list-disc list-inside">
                             <li>Developed a fully-fledged optical character recognition software utilising advanced machine learning and computer vision techniques, to convert raw bank documents into text documents.</li>
                         </ul>
                     </div>
@@ -501,13 +502,13 @@
 
                 <!-- Insight Robotics -->
                 <div class="mb-10 ml-8 relative">
-                    <div class="absolute -left-10 mt-1.5 w-4 h-4 rounded-full bg-slate-500 border-4 border-slate-900"></div>
+                    <div class="absolute -left-10 mt-1.5 w-4 h-4 rounded-full bg-gray-400 border-4 border-slate-50"></div>
                     <div class="glass-card p-6 rounded-xl">
-                        <span class="text-sm text-slate-400 font-mono mb-1 block">Nov 2015 &ndash; Jan 2016</span>
-                        <h3 class="text-xl font-bold">Software Engineering Intern (AI/ML)</h3>
-                        <h4 class="text-slate-400 mb-2">Insight Robotics Limited, Hong Kong</h4>
-                        <p class="text-slate-400 text-sm mb-3">Insight Robotics is a Hong Kong Robotics company whose flagship product is a fire-detection robot.</p>
-                        <ul class="text-slate-300 text-sm space-y-1.5 list-disc list-inside">
+                        <span class="text-sm text-gray-600 font-mono mb-1 block">Nov 2015 &ndash; Jan 2016</span>
+                        <h3 class="text-xl font-bold text-gray-900">Software Engineering Intern (AI/ML)</h3>
+                        <h4 class="text-gray-600 mb-2">Insight Robotics Limited, Hong Kong</h4>
+                        <p class="text-gray-600 text-sm mb-3">Insight Robotics is a Hong Kong Robotics company whose flagship product is a fire-detection robot.</p>
+                        <ul class="text-gray-700 text-sm space-y-1.5 list-disc list-inside">
                             <li>Developed an image-based smoke detection algorithm utilising advanced machine learning and computer vision techniques, which halved the false alarm rate and improved the detection rate.</li>
                         </ul>
                     </div>
@@ -517,17 +518,17 @@
     </section>
 
     <!-- EDUCATION -->
-    <section id="education" class="py-20 bg-slate-850">
+    <section id="education" class="py-20 bg-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold mb-8 text-center">Education</h2>
-            <div class="glass-card p-6 rounded-2xl border border-accent/20">
+            <h2 class="text-3xl font-bold mb-8 text-center text-gray-900">Education</h2>
+            <div class="glass-card p-6 rounded-2xl border border-purple-200">
                 <span class="text-sm text-accent font-mono mb-1 block">Sep 2011 &ndash; Jun 2015</span>
-                <h3 class="text-xl font-bold">Master of Engineering (Integrated 4-year Master's)</h3>
-                <p class="text-slate-300 text-sm mb-1"><strong>Course:</strong> Electronic and Electrical Engineering</p>
-                <h4 class="text-slate-400 mb-2">University College London (UCL), London, UK</h4>
-                <p class="text-slate-400 text-sm mb-3">UCL is one of the world's very best universities, consistently placed in the top 20 in global rankings.</p>
-                <p class="text-slate-300 text-sm mb-2"><strong>Achievements & Awards:</strong></p>
-                <ul class="text-slate-300 text-sm space-y-1.5 list-disc list-inside">
+                <h3 class="text-xl font-bold text-gray-900">Master of Engineering (Integrated 4-year Master's)</h3>
+                <p class="text-gray-700 text-sm mb-1"><strong>Course:</strong> Electronic and Electrical Engineering</p>
+                <h4 class="text-gray-600 mb-2">University College London (UCL), London, UK</h4>
+                <p class="text-gray-600 text-sm mb-3">UCL is one of the world's very best universities, consistently placed in the top 20 in global rankings.</p>
+                <p class="text-gray-700 text-sm mb-2"><strong>Achievements & Awards:</strong></p>
+                <ul class="text-gray-700 text-sm space-y-1.5 list-disc list-inside">
                     <li>Grade: First Class Honours</li>
                     <li><a href="https://www.slideshare.net/secret/isgkg5ztE1I4LG" target="_blank" class="text-primary hover:underline">Degree Certificate Link</a></li>
                     <li>Obtained first class results in all 4 years</li>
@@ -538,12 +539,12 @@
     </section>
 
     <!-- TALKS & TEACHING -->
-    <section id="talks" class="py-20 bg-slate-850">
+    <section id="talks" class="py-20 bg-white">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold mb-8 text-center">Talks, Teaching &amp; Community</h2>
+            <h2 class="text-3xl font-bold mb-8 text-center text-gray-900">Talks, Teaching &amp; Community</h2>
             <div class="glass-card p-6 rounded-2xl space-y-4">
-                <p class="text-slate-300 text-sm">Beyond individual delivery, I enjoy teaching and community-building around AI, ML and data science.</p>
-                <ul class="text-slate-300 text-sm space-y-2 list-disc list-inside">
+                <p class="text-gray-700 text-sm">Beyond individual delivery, I enjoy teaching and community-building around AI, ML and data science.</p>
+                <ul class="text-gray-700 text-sm space-y-2 list-disc list-inside">
                     <li>Delivered internal workshops and bootcamps on Python, ML fundamentals and deep learning for engineers and analysts.</li>
                     <li>Mentored junior data scientists and interns at SSL Wireless and Learners &amp; Yearners, focusing on best practices in experimentation, Git, and reproducible research.</li>
                     <li>Supported pitch decks and client demos, translating complex AI solutions into approachable narratives for non-technical stakeholders.</li>
@@ -553,107 +554,133 @@
     </section>
 
     <!-- CERTIFICATIONS -->
-    <section id="certifications" class="py-20 bg-slate-850">
+    <section id="certifications" class="py-20 bg-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold mb-8 text-center">Certification</h2>
+            <h2 class="text-3xl font-bold mb-8 text-center text-gray-900">Certification</h2>
             <div class="glass-card p-6 sm:p-8 rounded-2xl">
-                <h3 class="font-semibold text-slate-100 mb-4 text-lg">Coursera – Verified Courses</h3>
+                <h3 class="font-semibold text-gray-900 mb-4 text-lg">Coursera – Verified Courses</h3>
                 <div class="grid md:grid-cols-2 gap-6 text-sm">
                     <div>
-                        <ul class="text-slate-300 space-y-2 list-disc list-inside">
+                        <ul class="text-gray-700 space-y-2 list-disc list-inside">
                             <li>Deep Learning Specialization (5 courses) from Coursera (<a href="https://www.coursera.org/account/accomplishments/specialization/BLLGXBBCZJMW" target="_blank" class="text-primary hover:underline">Link</a>)</li>
                             <li>Machine Learning Specialization (4 courses) from Coursera (<a href="https://www.coursera.org/account/accomplishments/specialization/DBGGPCRJZC4B?utm_product=s12n" target="_blank" class="text-primary hover:underline">Link</a>)</li>
                         </ul>
                     </div>
                     <div>
-                        <ul class="text-slate-300 space-y-2 list-disc list-inside">
+                        <ul class="text-gray-700 space-y-2 list-disc list-inside">
                             <li>Data Engineering, Big Data, and Machine Learning on GCP (5 courses) from Coursera (<a href="https://www.coursera.org/account/accomplishments/specialization/WR7WQN9X6WHV" target="_blank" class="text-primary hover:underline">Link</a>)</li>
                             <li>Python Specialization (5 courses) from Coursera (<a href="https://www.coursera.org/account/accomplishments/specialization/4HFPDHNJAEBH" target="_blank" class="text-primary hover:underline">Link</a>)</li>
                         </ul>
                     </div>
                 </div>
-                <p class="text-slate-300 text-sm mt-6">Check out the <strong>recommendations</strong> from <strong>industry professional and leaders</strong>: <a href="https://www.linkedin.com/in/itratrahman/details/recommendations/" target="_blank" class="text-primary hover:underline">Link</a></p>
             </div>
         </div>
     </section>
 
     <!-- TESTIMONIALS -->
-    <section id="testimonials" class="py-20 bg-slate-900">
+    <section id="testimonials" class="py-20 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold mb-12 text-center">Endorsements</h2>
+            <h2 class="text-3xl font-bold mb-12 text-center text-gray-900">Endorsements</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="glass-card p-6 rounded-xl">
                     <i class="fas fa-quote-left text-3xl text-primary/30 mb-4"></i>
-                    <p class="text-slate-300 italic mb-4">"His contributions were pivotal in delivering key projects that significantly influenced new product development in the company."</p>
-                    <div class="font-bold text-white">Shahzada Redwan</div>
-                    <div class="text-xs text-slate-500">Former CTO, SSL Wireless</div>
+                    <p class="text-gray-700 italic mb-4">&quot;His contributions were pivotal in delivering key projects that significantly influenced new product development in the company.&quot;</p>
+                    <div class="font-bold text-gray-900">Shahzada Redwan</div>
+                    <div class="text-xs text-gray-500">Former CTO, SSL Wireless</div>
                 </div>
 
                 <div class="glass-card p-6 rounded-xl">
                     <i class="fas fa-quote-left text-3xl text-primary/30 mb-4"></i>
-                    <p class="text-slate-300 italic mb-4">"He possesses deep knowledge in Machine Learning, Computer Vision, NLP, and Generative AI, and excels at translating complex challenges into scalable, data-driven solutions."</p>
-                    <div class="font-bold text-white">Ketan Nirpagare</div>
-                    <div class="text-xs text-slate-500">Data Scientist, Ascend Performance Materials</div>
+                    <p class="text-gray-700 italic mb-4">"He possesses deep knowledge in Machine Learning, Computer Vision, NLP, and Generative AI, and excels at translating complex challenges into scalable, data-driven solutions."</p>
+                    <div class="font-bold text-gray-900">Ketan Nirpagare</div>
+                    <div class="text-xs text-gray-500">Data Scientist, Ascend Performance Materials</div>
                 </div>
 
                 <div class="glass-card p-6 rounded-xl">
                     <i class="fas fa-quote-left text-3xl text-primary/30 mb-4"></i>
-                    <p class="text-slate-300 italic mb-4">"Within two months he created a novel image-based smoke detection algorithm that the company implemented in its wildfire detection robots long term."</p>
-                    <div class="font-bold text-white">Tam Wai Ming</div>
-                    <div class="text-xs text-slate-500">Former R&amp;D Manager, Insight Robotics</div>
+                    <p class="text-gray-700 italic mb-4">"Within two months he created a novel image-based smoke detection algorithm that the company implemented in its wildfire detection robots long term."</p>
+                    <div class="font-bold text-gray-900">Tam Wai Ming</div>
+                    <div class="text-xs text-gray-500">Former R&amp;D Manager, Insight Robotics</div>
                 </div>
 
                 <div class="glass-card p-6 rounded-xl">
                     <i class="fas fa-quote-left text-3xl text-primary/30 mb-4"></i>
-                    <p class="text-slate-300 italic mb-4">"He consistently impressed me with his diverse skillset—proficient in Computer Vision, Natural Language Processing, and Big Data—with clear communication and a collaborative spirit."</p>
-                    <div class="font-bold text-white">Asruf-Ul Jubair</div>
-                    <div class="text-xs text-slate-500">Former Principal Product Manager, SSL Wireless</div>
+                    <p class="text-gray-700 italic mb-4">"He consistently impressed me with his diverse skillset—proficient in Computer Vision, Natural Language Processing, and Big Data—with clear communication and a collaborative spirit."</p>
+                    <div class="font-bold text-gray-900">Asruf-Ul Jubair</div>
+                    <div class="text-xs text-gray-500">Former Principal Product Manager, SSL Wireless</div>
                 </div>
 
                 <div class="glass-card p-6 rounded-xl">
                     <i class="fas fa-quote-left text-3xl text-primary/30 mb-4"></i>
-                    <p class="text-slate-300 italic mb-4">"He is a standout Data Scientist who combines deep technical expertise with the soft skills needed to turn AI systems into commercial successes."</p>
-                    <div class="font-bold text-white">Musarrat Rahman</div>
-                    <div class="text-xs text-slate-500">Former Senior Data Scientist, SSL Wireless</div>
+                    <p class="text-gray-700 italic mb-4">"He is a standout Data Scientist who combines deep technical expertise with the soft skills needed to turn AI systems into commercial successes."</p>
+                    <div class="font-bold text-gray-900">Musarrat Rahman</div>
+                    <div class="text-xs text-gray-500">Former Senior Data Scientist, SSL Wireless</div>
                 </div>
 
                 <div class="glass-card p-6 rounded-xl">
                     <i class="fas fa-quote-left text-3xl text-primary/30 mb-4"></i>
-                    <p class="text-slate-300 italic mb-4">"Itrat is an outstanding student who graduated with a first class MEng, showing consistently high academic performance and strong experimental and analytical skills."</p>
-                    <div class="font-bold text-white">Dr Edward Romans</div>
-                    <div class="text-xs text-slate-500">Associate Professor, UCL EE Department &amp; LCN</div>
+                    <p class="text-gray-700 italic mb-4">"Itrat is an outstanding student who graduated with a first class MEng, showing consistently high academic performance and strong experimental and analytical skills."</p>
+                    <div class="font-bold text-gray-900">Dr Edward Romans</div>
+                    <div class="text-xs text-gray-500">Associate Professor, UCL EE Department &amp; LCN</div>
                 </div>
 
                 <div class="glass-card p-6 rounded-xl">
                     <i class="fas fa-quote-left text-3xl text-primary/30 mb-4"></i>
-                    <p class="text-slate-300 italic mb-4">"His academic ability is outstanding; he achieved yearly exam averages at First Class level in every year of the programme."</p>
-                    <div class="font-bold text-white">Prof Robert Killey</div>
-                    <div class="text-xs text-slate-500">Professor, UCL EE Department</div>
+                    <p class="text-gray-700 italic mb-4">"His academic ability is outstanding; he achieved yearly exam averages at First Class level in every year of the programme."</p>
+                    <div class="font-bold text-gray-900">Prof Robert Killey</div>
+                    <div class="text-xs text-gray-500">Professor, UCL EE Department</div>
+                </div>
+            </div>
+
+            <!-- More Recommendations CTA -->
+            <div class="mt-16 text-center">
+                <div class="inline-block relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-primary to-purple-600 rounded-2xl blur-xl opacity-20 animate-pulse"></div>
+                    <div class="relative glass-card px-12 py-8 rounded-2xl border-2 border-primary/20">
+                        <div class="flex items-center justify-center gap-3 mb-4">
+                            <i class="fas fa-star text-yellow-500 text-2xl"></i>
+                            <i class="fas fa-star text-yellow-500 text-2xl"></i>
+                            <i class="fas fa-star text-yellow-500 text-2xl"></i>
+                            <i class="fas fa-star text-yellow-500 text-2xl"></i>
+                            <i class="fas fa-star text-yellow-500 text-2xl"></i>
+                        </div>
+                        <p class="text-gray-700 text-lg mb-4">
+                            Discover more <span class="font-bold text-primary">recommendations</span> from 
+                            <span class="font-bold text-purple-600">industry professionals and leaders</span>
+                        </p>
+                        <a href="https://www.linkedin.com/in/itratrahman/details/recommendations/" 
+                           target="_blank" 
+                           class="inline-flex items-center gap-2 bg-gradient-to-r from-primary to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold px-8 py-3 rounded-full transition transform hover:scale-105 shadow-lg">
+                            <i class="fab fa-linkedin text-xl"></i>
+                            <span>View All on LinkedIn</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-slate-900 border-t border-slate-800 py-12">
+    <footer class="bg-white border-t border-gray-200 py-12">
         <div class="max-w-7xl mx-auto px-4 text-center">
-            <h2 class="text-2xl font-bold mb-6">Let's Build Something Intelligent</h2>
-            <p class="text-slate-400 mb-6 max-w-2xl mx-auto">
+            <h2 class="text-2xl font-bold mb-6 text-gray-900">Let's Build Something Intelligent</h2>
+            <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
                 Willing to relocate anywhere in the US | Looking for C2C contract/H1B transfer for full-time role only
             </p>
 
-            <div class="flex flex-wrap justify-center gap-4 mb-6 text-sm text-slate-300">
+            <div class="flex flex-wrap justify-center gap-4 mb-6 text-sm text-gray-700">
                 <span class="flex items-center gap-2"><i class="fas fa-phone text-primary"></i><a href="tel:+18326701119" class="hover:text-primary">+1 (832) 670-1119</a></span>
                 <span class="flex items-center gap-2"><i class="fas fa-envelope text-primary"></i><a href="mailto:rahmanitrat@gmail.com" class="hover:text-primary">rahmanitrat@gmail.com</a></span>
                 <span class="flex items-center gap-2"><i class="fab fa-linkedin text-primary"></i><a href="https://linkedin.com/in/itratrahman" target="_blank" class="hover:text-primary">LinkedIn</a></span>
                 <span class="flex items-center gap-2"><i class="fab fa-github text-primary"></i><a href="https://github.com/itratrahman" target="_blank" class="hover:text-primary">GitHub</a></span>
             </div>
 
-            <a href="mailto:rahmanitrat@gmail.com" class="inline-block bg-white text-slate-900 hover:bg-slate-200 font-bold py-3 px-8 rounded-full transition duration-300">
+            <a href="mailto:rahmanitrat@gmail.com" class="inline-block bg-primary text-white hover:bg-blue-700 font-bold py-3 px-8 rounded-full transition duration-300">
                 Get in Touch
             </a>
 
-            <div class="mt-8 text-slate-600 text-sm">
+            <div class="mt-8 text-gray-500 text-sm">
                 &copy; 2026 Itrat Rahman. All Rights Reserved.
             </div>
         </div>
