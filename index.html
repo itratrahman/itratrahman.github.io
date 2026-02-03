@@ -530,11 +530,43 @@
                 <h2 class="relative text-3xl font-bold text-gray-900"><span class="text-primary">///</span> Selected Projects</h2>
             </div>
             <div class="space-y-8">
+                <!-- Project 1 -->
                 <div class="glass-card p-8 md:p-12 rounded-3xl flex flex-col gap-4 border-l-4 border-gray-400">
-                    <ul class="text-sm text-gray-700 space-y-3">
-                        <li><span class="font-semibold">Document Verification Application of EU Driving License</span> (<a href="https://github.com/itratrahman/document_verification" target="_blank" class="text-primary hover:underline">Repository</a>) - Built a production-ready AI document verification system with 3-stage pipeline (EfficientNet-B0 binary classifier → PaddleOCR marker validation → RetinaFace detection), achieving 95% end-to-end accuracy and <2s inference. Trained models on 3,866 images (97% validation F1) with Optuna hyperparameter optimization and MLflow tracking. Productionized with FastAPI + async MongoDB logging + Docker; implemented thread-safe inference, hot model reloading, and comprehensive health checks with pytest integration.</li>
-                        <li><span class="font-semibold">Stock Market Agent</span> (<a href="https://github.com/itratrahman/stock_market_agent" target="_blank" class="text-primary hover:underline">Repository</a>) - Built an AI stock analysis agent with 5-stage pipeline: FMP API data ingestion → NeuralProphet forecasting (5yr daily data, 5 stocks) → 30-day predictions → NewsAPI article extraction with newspaper4k → LangGraph agentic workflow. Implemented conditional state machine routing forecast quality to news summarization, using Ollama/Llama 3.2 for iterative article synthesis and 3-tier investment recommendations. Outputs tabulated reports with forecast summaries (<300 chars), news digests (<1000 chars), and decision rationale (<200 chars).</li>
-                        <li><span class="font-semibold">Codebase of ML Training Program</span> (<a href="https://github.com/itratrahman/data_science_training" target="_blank" class="text-primary hover:underline">Repository</a>) - Built a comprehensive data science training curriculum with 50+ Jupyter notebooks covering 7 ML domains; implemented 15+ algorithms from scratch in NumPy (linear/logistic regression, decision trees, KNN, Naive Bayes, PCA). Developed modular ML library with gradient descent optimization, L1/L2 regularization, and utilities for preprocessing, model selection, and evaluation.</li>
+                    <h3 class="text-lg font-bold text-gray-900">Document Verification Application of EU Driving License 
+                        <a href="https://github.com/itratrahman/document_verification" target="_blank" class="text-primary hover:underline text-sm font-normal">(Repository)</a>
+                    </h3>
+                    <ul class="text-sm text-gray-700 space-y-2 list-disc list-inside ml-2">
+                        <li>Built a production-ready AI document verification system with 3-stage pipeline: EfficientNet-B0 binary classifier → PaddleOCR marker validation → RetinaFace detection</li>
+                        <li>Achieved 95% end-to-end accuracy and <2s inference time</li>
+                        <li>Trained models on 3,866 images achieving 97% validation F1 score with Optuna hyperparameter optimization and MLflow tracking</li>
+                        <li>Productionized with FastAPI + async MongoDB logging + Docker</li>
+                        <li>Implemented thread-safe inference, hot model reloading, and comprehensive health checks with pytest integration</li>
+                    </ul>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="glass-card p-8 md:p-12 rounded-3xl flex flex-col gap-4 border-l-4 border-gray-400">
+                    <h3 class="text-lg font-bold text-gray-900">Stock Market Agent 
+                        <a href="https://github.com/itratrahman/stock_market_agent" target="_blank" class="text-primary hover:underline text-sm font-normal">(Repository)</a>
+                    </h3>
+                    <ul class="text-sm text-gray-700 space-y-2 list-disc list-inside ml-2">
+                        <li>Built an AI stock analysis agent with 5-stage pipeline: FMP API data ingestion → NeuralProphet forecasting (5yr daily data, 5 stocks) → 30-day predictions → NewsAPI article extraction with newspaper4k → LangGraph agentic workflow</li>
+                        <li>Implemented conditional state machine routing forecast quality to news summarization</li>
+                        <li>Used Ollama/Llama 3.2 for iterative article synthesis and 3-tier investment recommendations</li>
+                        <li>Outputs tabulated reports with forecast summaries (<300 chars), news digests (<1000 chars), and decision rationale (<200 chars)</li>
+                    </ul>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="glass-card p-8 md:p-12 rounded-3xl flex flex-col gap-4 border-l-4 border-gray-400">
+                    <h3 class="text-lg font-bold text-gray-900">Codebase of ML Training Program 
+                        <a href="https://github.com/itratrahman/data_science_training" target="_blank" class="text-primary hover:underline text-sm font-normal">(Repository)</a>
+                    </h3>
+                    <ul class="text-sm text-gray-700 space-y-2 list-disc list-inside ml-2">
+                        <li>Built a comprehensive data science training curriculum with 50+ Jupyter notebooks covering 7 ML domains</li>
+                        <li>Implemented 15+ algorithms from scratch in NumPy including linear/logistic regression, decision trees, KNN, Naive Bayes, and PCA</li>
+                        <li>Developed modular ML library with gradient descent optimization and L1/L2 regularization</li>
+                        <li>Created utilities for preprocessing, model selection, and evaluation</li>
                     </ul>
                 </div>
             </div>
