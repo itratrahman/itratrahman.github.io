@@ -119,9 +119,17 @@
 
     <!-- ABOUT TAB -->
     <div id="about-tab" class="tab-content active">
-    <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12 bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50">
-        <div class="md:w-1/2 space-y-6">
-            <div class="inline-flex flex-wrap items-center gap-2 text-xs font-semibold tracking-wider uppercase">
+    <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50">
+        <!-- Profile Picture -->
+        <div class="flex justify-center mb-12 relative">
+            <div class="absolute inset-0 bg-primary opacity-10 blur-3xl rounded-full"></div>
+            <img src="https://github.com/itratrahman/itratrahman.github.io/blob/main/profile_pic.jpg?raw=true" alt="Itrat Rahman" class="relative w-72 h-72 md:w-84 md:h-84 rounded-full object-cover border-4 border-gray-200 shadow-2xl grayscale hover:grayscale-0 transition duration-500">
+        </div>
+        
+        <!-- Centered Content -->
+        <div class="max-w-5xl mx-auto space-y-6">
+            <div class="flex justify-center">
+                <div class="inline-flex flex-wrap items-center gap-2 text-xs font-semibold tracking-wider uppercase">
                 <span class="px-3 py-1 text-primary bg-blue-500/10 rounded-full flex items-center gap-2">
                     <i class="fas fa-passport text-[11px]"></i>
                     H-1B | Open to C2C & Transfer
@@ -129,16 +137,16 @@
                 <span class="px-3 py-1 text-emerald-300 bg-emerald-500/10 rounded-full flex items-center gap-2">
                     <i class="fas fa-location-dot text-[11px]"></i>
                     Relocatable across US
-                </span>
+                </div>
             </div>
-            <h1 class="text-5xl md:text-6xl font-bold leading-tight text-gray-900">
+            <h1 class="text-5xl md:text-6xl font-bold leading-tight text-gray-900 text-center">
                 Engineering <br>
                 <span class="gradient-text">Intelligent Futures</span>
             </h1>
-            <p class="text-gray-700 text-base leading-relaxed">
+            <p class="text-gray-700 text-base leading-relaxed text-center">
                 I am a <span class="font-semibold">Senior AI Engineer/Data Scientist</span> with over <span class="font-semibold">9 years</span> of technical experience with expertise in Computer Vision, NLP, LLM, GenAI, Chatbot, Agentic AI, MLOps, Cloud Technologies, Big Data Analytics, and Data Science. I have extensive <span class="font-semibold">AI/Data product development</span> experience; transformed pet projects into startup & SAAS products; wore multiple hats and worked beyond corporate boundaries for product launches, attended client meetings to pitch products.
             </p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-gray-700">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-gray-700 max-w-3xl mx-auto">
                 <div class="flex items-center gap-2">
                     <i class="fas fa-university text-accent"></i>
                     <span>UCL MEng, First Class Honours (All 4 years)</span>
@@ -158,20 +166,30 @@
             </div>
 
             <div class="glass-card p-4 rounded-2xl mt-2">
-                <h3 class="text-sm font-semibold mb-2 text-gray-900 tracking-wide uppercase">Skills Summary</h3>
+                <h3 class="text-sm font-semibold mb-2 text-gray-900 tracking-wide uppercase">Professional Summary</h3>
                 <ul class="text-xs sm:text-sm text-gray-700 space-y-1.5 list-disc list-inside">
-                    <li><strong>Data Science/Machine Learning:</strong> linear algebra, statistics, algorithms & data structures, data visualisation, A/B testing, classical machine learning, deep learning, SQL, churn Analysis, time series forecasting, natural language processing, named entity recognition
+                    <li><strong>Senior AI Engineer/Data Scientist</strong> with over 9 years of technical experience with expertise in Computer Vision, NLP, LLM, GenAI, Chatbot, Agentic AI, MLOps, Cloud Technologies, Big Data Analytics, and Data Science
                     </li>
-                    <li><strong>GenAI/AI Agents:</strong> embeddings, semantic search,transformer model, LLM, Diffusion, RAG, vector database, GAN, GenAI, agents, chatbot, machine translation, speech recognition
+                    <li><strong>Natural Language Processing:</strong> Engineered production-grade NER and Bengali ASR models achieving 95% entity extraction accuracy and industry-leading low error rates (2.63 LD) for automated voice input
                     </li>
-                    <li><strong>Computer Vision:</strong> Binary Morphology, Perspective/Affine Transformation, Edge Detection, OCR, object segmentation, object detection, facial recognition, video generation
+                    <li><strong>GenAI & LLM & Agentic AI:</strong> Architected RAG-based agentic workflows and Custom GPTs for SharePoint/CRM that improved enterprise research and analytics productivity by 5x–10x through automated document parsing, NLQ interfaces etc.
                     </li>
-                    <li><strong>Data Science Packages/Tools:</strong> python, numpy, pandas, scipy, matplotlib, seaborn, bokeh, folium, Scikit-Learn, XGBoost, nltk, pyspark, dask, Looker Studio, Tableau
+                    <li><strong>Computer Vision:</strong> Deployed scalable document & biometric verification and surveillance systems (99.5% accuracy), optimizing deep learning models for real-time inference on both servers and edge devices.
+                    </li>
+                    <li><strong>MLOps:</strong> Established automated CI/CD and continuous retraining pipelines using Airflow and Jenkins, ensuring seamless deployment, versioning, and monitoring of deep learning models with zero downtime.
+                    </li>
+                    <li><strong>Data Science:</strong> Delivered actionable business value through AutoML forecasting and A/B testing that drove a 7% increase in transaction volume, alongside geospatial optimizations that significantly reduced operational logistics costs.
+                    </li>
+                    <li><strong>Data Engineering:</strong> Built high-throughput distributed pipelines processing 100M+ monthly records, accelerating data processing speeds by up to 30x.
+                    </li>
+                    <li><strong>Cloud Computing:</strong> Designed serverless AI architectures on GCP and Azure, utilizing Cloud Run and Azure Functions to deploy scalable microservices and secure middleware for enterprise data integration.
+                    </li>
+                    <li>Extensive <strong>AI/Data product development</strong> experience; transformed pet projects into startup & SAAS products; wore multiple hats and worked beyond corporate boundaries for product launches, attended client meetings to pitch products
                     </li>
                 </ul>
             </div>
 
-            <div class="pt-4 flex flex-wrap gap-4">
+            <div class="pt-4 flex flex-wrap gap-4 justify-center">
                 <a href="https://github.com/itratrahman" target="_blank" class="glass-card px-6 py-3 rounded-lg hover:bg-gray-100 transition flex items-center gap-2 text-gray-700">
                     <i class="fab fa-github text-xl"></i> GitHub
                 </a>
@@ -182,10 +200,6 @@
                 <i class="fas fa-file-alt text-xl"></i> Portfolio
                 </a>
             </div>
-        </div>
-        <div class="md:w-1/2 flex justify-center relative">
-            <div class="absolute inset-0 bg-primary opacity-10 blur-3xl rounded-full"></div>
-            <img src="https://github.com/itratrahman/itratrahman.github.io/blob/main/profile_pic.jpg?raw=true" alt="Itrat Rahman" class="relative w-80 h-80 md:w-96 md:h-96 rounded-full object-cover border-4 border-gray-200 shadow-2xl grayscale hover:grayscale-0 transition duration-500">
         </div>
     </section>
 
