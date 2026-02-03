@@ -39,6 +39,24 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.3s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .tab-button {
+            transition: all 0.3s ease;
+        }
+        .tab-button.active {
+            background: linear-gradient(to right, #2563eb, #7c3aed);
+            color: white;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-gray-900 antialiased selection:bg-primary selection:text-white">
@@ -49,18 +67,6 @@
             <div class="flex items-center justify-between h-16">
                 <div class="flex-shrink-0 font-bold text-xl tracking-tighter text-gray-900">
                     ITRAT<span class="text-primary">RAHMAN</span>
-                </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#about" class="text-gray-700 hover:text-primary transition px-3 py-2 rounded-md text-sm font-medium">About</a>
-                        <a href="#skills" class="text-gray-700 hover:text-primary transition px-3 py-2 rounded-md text-sm font-medium">Skills</a>
-                        <a href="#projects" class="text-gray-700 hover:text-primary transition px-3 py-2 rounded-md text-sm font-medium">Projects</a>
-                        <a href="#experience" class="text-gray-700 hover:text-primary transition px-3 py-2 rounded-md text-sm font-medium">Experience</a>
-                        <a href="#education" class="text-gray-700 hover:text-primary transition px-3 py-2 rounded-md text-sm font-medium">Education</a>
-                        <a href="#talks" class="text-gray-700 hover:text-primary transition px-3 py-2 rounded-md text-sm font-medium">Talks</a>
-                        <a href="#certifications" class="text-gray-700 hover:text-primary transition px-3 py-2 rounded-md text-sm font-medium">Certifications</a>
-                        <a href="#testimonials" class="text-gray-700 hover:text-primary transition px-3 py-2 rounded-md text-sm font-medium">Recommendations</a>
-                    </div>
                 </div>
                 <div class="flex items-center gap-3">
                     <a href="https://docs.google.com/document/d/16YytFdLL9KPsxp9QJlrrrPmlk7QWv-HqCUW2brRMmBE/edit?usp=drive_link" class="hidden sm:inline-flex glass-card px-4 py-2 rounded-full text-xs font-semibold text-gray-700 hover:bg-gray-100 transition" target="_blank" rel="noopener noreferrer">
@@ -74,8 +80,46 @@
         </div>
     </nav>
 
-    <!-- HERO / ABOUT -->
-    <section id="about" class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12">
+    <!-- TAB NAVIGATION -->
+    <div class="fixed w-full z-40 bg-slate-50/95 backdrop-blur-md border-b border-gray-200 shadow-sm" style="top: 64px;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-center overflow-x-auto py-3">
+                <div class="flex gap-2">
+                    <button onclick="switchTab('about')" class="tab-button active px-4 py-2 rounded-full text-sm font-medium transition whitespace-nowrap">
+                        About
+                    </button>
+                    <button onclick="switchTab('bio')" class="tab-button px-4 py-2 rounded-full text-sm font-medium text-gray-700 hover:bg-gray-200 transition whitespace-nowrap">
+                        Career Bio
+                    </button>
+                    <button onclick="switchTab('skills')" class="tab-button px-4 py-2 rounded-full text-sm font-medium text-gray-700 hover:bg-gray-200 transition whitespace-nowrap">
+                        Skills
+                    </button>
+                    <button onclick="switchTab('experience')" class="tab-button px-4 py-2 rounded-full text-sm font-medium text-gray-700 hover:bg-gray-200 transition whitespace-nowrap">
+                        Experience
+                    </button>
+                    <button onclick="switchTab('projects')" class="tab-button px-4 py-2 rounded-full text-sm font-medium text-gray-700 hover:bg-gray-200 transition whitespace-nowrap">
+                        Projects
+                    </button>
+                    <button onclick="switchTab('education')" class="tab-button px-4 py-2 rounded-full text-sm font-medium text-gray-700 hover:bg-gray-200 transition whitespace-nowrap">
+                        Education
+                    </button>
+                    <button onclick="switchTab('certifications')" class="tab-button px-4 py-2 rounded-full text-sm font-medium text-gray-700 hover:bg-gray-200 transition whitespace-nowrap">
+                        Certifications
+                    </button>
+                    <button onclick="switchTab('testimonials')" class="tab-button px-4 py-2 rounded-full text-sm font-medium text-gray-700 hover:bg-gray-200 transition whitespace-nowrap">
+                        Recommendations
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <div style="padding-top: 128px;">
+
+    <!-- ABOUT TAB -->
+    <div id="about-tab" class="tab-content active">
+    <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12">
         <div class="md:w-1/2 space-y-6">
             <div class="inline-flex flex-wrap items-center gap-2 text-xs font-semibold tracking-wider uppercase">
                 <span class="px-3 py-1 text-primary bg-blue-500/10 rounded-full flex items-center gap-2">
@@ -168,9 +212,70 @@
             </div>
         </div>
     </section>
+    </div>
+    <!-- END ABOUT TAB -->
 
-    <!-- SKILLS -->
-    <section id="skills" class="py-20 bg-slate-50">
+    <!-- CAREER BIO TAB -->
+    <div id="bio-tab" class="tab-content">
+    <section class="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold mb-8 text-center">
+                <span class="gradient-text">Career Bio</span>
+            </h2>
+            <div class="relative">
+                <div class="absolute inset-0 bg-gradient-to-r from-primary to-purple-600 rounded-3xl blur-2xl opacity-10 animate-pulse"></div>
+                <div class="relative glass-card p-8 md:p-12 rounded-3xl border-2 border-primary/20 shadow-2xl">
+                    <div class="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-primary to-purple-600 rounded-l-3xl"></div>
+                    <div class="pl-4">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-12 h-12 bg-gradient-to-br from-primary to-purple-600 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-user-tie text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900">Professional Journey</h3>
+                        </div>
+                        <div class="space-y-6 text-gray-700 text-base leading-relaxed">
+                            <p>
+                                For over nine years, I have operated at the intersection of deep technical research and scalable product engineering, building a reputation as a Senior AI Engineer and Data Scientist who translates complex algorithms into tangible business return on investment. A First Class Honours graduate from University College London (UCL), I distinguish myself not just by building models, but by architecting end-to-end production systems that solve ambiguous business problems. My career is defined by a unique ability to transform experimental "pet projects" into fully commercialized SaaS products and startups, effectively bridging the gap between the research lab and the enterprise boardroom.
+                            </p>
+                            <div class="border-l-4 border-primary/30 pl-6 py-2 bg-blue-50/50 rounded-r-xl">
+                                <p>
+                                    Most recently, I have been at the forefront of the Generative AI revolution, designing Agentic AI systems that fundamentally change how enterprises handle knowledge. At Ascend Performance Materials, I architected sophisticated RAG-based chatbots and Custom GPT agents that integrated seamlessly with internal data silos like SharePoint and Dynamics 365. These were not mere prototypes; they were robust operational tools that revolutionized internal workflows, accelerating literature reviews by five to ten times and doubling the efficiency of CRM analysis. Beyond the modeling layer, I demonstrated a keen awareness of enterprise security needs by engineering compliance pipelines that automated the centralization of ChatGPT workspace logs into SIEM systems, ensuring that innovation never came at the cost of auditability.
+                                </p>
+                            </div>
+                            <p>
+                                My capacity for product leadership was most visibly demonstrated during my tenure at SSL Wireless, Bangladesh's leading fintech provider. There, I led the development of a real-time face recognition system that achieved 99.5% accuracy on custom datasets. The success of this technology was so profound that it was spun off into a dedicated startup, SSL Sentinel, for which I secured the first eight enterprise clients. Simultaneously, I built DocChecker.ai, an automated eKYC and document verification SaaS. By processing complex OCR and resemblance checks with 98% mean average precision, this system reduced manual review backlogs by 40% and became a key revenue driver, proving my ability to deliver AI that directly impacts the bottom line.
+                            </p>
+                            <div class="border-l-4 border-purple-600/30 pl-6 py-2 bg-purple-50/50 rounded-r-xl">
+                                <p>
+                                    Underpinning these product successes is a rigorous engineering mindset focused on scale and reliability. Unlike pure researchers who may stop at a notebook prototype, I am deeply embedded in the engineering lifecycle. I have architected multi-cloud data pipelines across GCP, AWS, and Azure capable of handling over 100 million rows per month, optimizing processing speeds by up to 30 times through distributed computing. My expertise spans the full MLOps stack, utilizing tools like Apache Airflow for orchestration, MLflow for tracking, and Docker with FastAPI for deploying containerized microservices that ensure zero downtime. Whether deploying pedestrian detection on edge devices like the Jetson Nano or forecasting transaction volumes that drove a 7% increase in gateway usage, I build systems designed to withstand the demands of real-world production environments.
+                                </p>
+                            </div>
+                            <p class="text-lg font-semibold text-gray-900 pt-4">
+                                Today, I offer a rare combination of skills—spanning Generative AI, Computer Vision, and Data Engineering—backed by a proven playbook for turning data into intelligent products. Currently based in the US on an H-1B visa, I am available for C2C contracts or full-time roles, ready to bring this blend of technical depth and strategic product vision to my next challenge.
+                            </p>
+                        </div>
+                        <div class="mt-8 flex flex-wrap gap-3 justify-center">
+                            <span class="px-4 py-2 bg-gradient-to-r from-primary to-blue-600 text-white rounded-full text-sm font-semibold shadow-lg">
+                                <i class="fas fa-trophy mr-2"></i>9+ Years Experience
+                            </span>
+                            <span class="px-4 py-2 bg-gradient-to-r from-purple-600 to-purple-700 text-white rounded-full text-sm font-semibold shadow-lg">
+                                <i class="fas fa-rocket mr-2"></i>Product & Startup Builder
+                            </span>
+                            <span class="px-4 py-2 bg-gradient-to-r from-emerald-600 to-emerald-700 text-white rounded-full text-sm font-semibold shadow-lg">
+                                <i class="fas fa-code mr-2"></i>Full-Stack AI Engineer
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+    <!-- END CAREER BIO TAB -->
+
+    <!-- SKILLS TAB -->
+    <div id="skills-tab" class="tab-content">
+    <section class="py-20 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold mb-12 text-center text-gray-900"><span class="text-primary">///</span> Technical Arsenal</h2>
 
@@ -279,9 +384,12 @@
             </div>
         </div>
     </section>
+    </div>
+    <!-- END SKILLS TAB -->
 
-    <!-- EXPERIENCE -->
-    <section id="experience" class="py-20 bg-slate-50">
+    <!-- EXPERIENCE TAB -->
+    <div id="experience-tab" class="tab-content">
+    <section class="py-20 bg-slate-50">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold mb-12 text-center text-gray-900">Professional Journey</h2>
 
@@ -390,9 +498,12 @@
             </div>
         </div>
     </section>
+    </div>
+    <!-- END EXPERIENCE TAB -->
 
-    <!-- SELECTED PROJECTS -->
-    <section id="selected-projects" class="py-20 bg-white">
+    <!-- PROJECTS TAB -->
+    <div id="projects-tab" class="tab-content">
+    <section class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold mb-12 text-gray-900"><span class="text-primary">///</span> Selected Projects</h2>
             <div class="space-y-8">
@@ -406,9 +517,12 @@
             </div>
         </div>
     </section>
+    </div>
+    <!-- END PROJECTS TAB -->
 
-    <!-- EDUCATION -->
-    <section id="education" class="py-20 bg-slate-50">
+    <!-- EDUCATION TAB -->
+    <div id="education-tab" class="tab-content">
+    <section class="py-20 bg-slate-50">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold mb-8 text-center text-gray-900">Education</h2>
             <div class="glass-card p-6 rounded-2xl border border-purple-200">
@@ -427,24 +541,12 @@
             </div>
         </div>
     </section>
+    </div>
+    <!-- END EDUCATION TAB -->
 
-    <!-- TALKS & TEACHING -->
-    <section id="talks" class="py-20 bg-white">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold mb-8 text-center text-gray-900">Talks, Teaching &amp; Community</h2>
-            <div class="glass-card p-6 rounded-2xl space-y-4">
-                <p class="text-gray-700 text-sm">Beyond individual delivery, I enjoy teaching and community-building around AI, ML and data science.</p>
-                <ul class="text-gray-700 text-sm space-y-2 list-disc list-inside">
-                    <li>Delivered internal workshops and bootcamps on Python, ML fundamentals and deep learning for engineers and analysts.</li>
-                    <li>Mentored junior data scientists and interns at SSL Wireless and Learners &amp; Yearners, focusing on best practices in experimentation, Git, and reproducible research.</li>
-                    <li>Supported pitch decks and client demos, translating complex AI solutions into approachable narratives for non-technical stakeholders.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- CERTIFICATIONS -->
-    <section id="certifications" class="py-20 bg-white">
+    <!-- CERTIFICATIONS TAB -->
+    <div id="certifications-tab" class="tab-content">
+    <section class="py-20 bg-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold mb-8 text-center text-gray-900">Certification</h2>
             <div class="glass-card p-6 sm:p-8 rounded-2xl">
@@ -466,9 +568,12 @@
             </div>
         </div>
     </section>
+    </div>
+    <!-- END CERTIFICATIONS TAB -->
 
-    <!-- TESTIMONIALS -->
-    <section id="testimonials" class="py-20 bg-slate-50">
+    <!-- TESTIMONIALS TAB -->
+    <div id="testimonials-tab" class="tab-content">
+    <section class="py-20 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold mb-12 text-center text-gray-900">Endorsements</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -564,6 +669,11 @@
             </div>
         </div>
     </section>
+    </div>
+    <!-- END TESTIMONIALS TAB -->
+
+    </div>
+    <!-- END MAIN CONTENT CONTAINER -->
 
     <!-- FOOTER -->
     <footer class="bg-white border-t border-gray-200 py-12">
@@ -589,6 +699,39 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function switchTab(tabName) {
+            // Hide all tab contents
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Remove active class from all tab buttons
+            const tabButtons = document.querySelectorAll('.tab-button');
+            tabButtons.forEach(button => {
+                button.classList.remove('active');
+                button.classList.add('text-gray-700', 'hover:bg-gray-200');
+                button.classList.remove('text-white');
+            });
+
+            // Show selected tab content
+            const selectedTab = document.getElementById(tabName + '-tab');
+            if (selectedTab) {
+                selectedTab.classList.add('active');
+            }
+
+            // Highlight selected tab button
+            const selectedButton = event.target;
+            selectedButton.classList.add('active');
+            selectedButton.classList.remove('text-gray-700', 'hover:bg-gray-200');
+            selectedButton.classList.add('text-white');
+
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
 
 </body>
 </html>
