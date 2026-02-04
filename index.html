@@ -486,7 +486,7 @@
                             <li>Built and deployed a RAG-based resume-matching chatbot (GenAI, OpenAI) that retrieves best-fit resumes from user prompts and supports multi-turn conversation, improving resume discovery speed and relevance. Developed an LLM-based resume parser (GCP Vision API, LangChain) to extract and structure key resume fields with 99% extraction accuracy, storing documents and metadata in Pinecone for retrieval. Implemented LLM-assisted evaluation for chatbot answer quality, achieving 95% accuracy on internal evaluation.</li>
                             <li>Trained a bert model using TDSAE training scheme on the corpus of resume text to function as the embedder for the RAG vector search in the aforementioned chatbot.</li>
                             <li>Trained a multimodal model (Hugging face, NVIDIA GPU) on resume images + text using CLIP-style contrastive loss and LoRA/QLoRA fine-tuning to enable downstream tasks such as embedding-based clustering and ranking.</li>
-                            <li>Clustered resume \"types\" via hierarchical clustering on multimodal embeddings (content, layout aesthetics, applicant features) to support segmentation and analytics.</li>
+                            <li>Clustered resume types via hierarchical clustering on multimodal embeddings (content, layout aesthetics, applicant features) to support segmentation and analytics.</li>
                             <li>Developed a resume ranking model using linear methods over multimodal inputs + LLM-inferred similarity + LLM-extracted QA metrics to improve candidate ordering.</li>
                         </ul>
                         <div class="mt-4">
