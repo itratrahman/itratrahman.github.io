@@ -83,7 +83,7 @@
     <!-- TAB NAVIGATION -->
     <div class="fixed w-full z-40 bg-slate-50/95 backdrop-blur-md border-b border-gray-200 shadow-sm" style="top: 64px;">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-center overflow-x-auto py-3">
+            <div id="tab-navigation-scroll" class="flex items-center justify-center overflow-x-auto py-3" style="scroll-behavior: smooth;">
                 <div class="flex gap-2">
                     <button onclick="switchTab('about')" class="tab-button active px-4 py-2 rounded-full text-sm font-medium transition whitespace-nowrap">
                         About
@@ -286,6 +286,51 @@
     </section>
     </div>
     <!-- END CAREER BIO TAB -->
+
+    <script>
+        // Ensure tab navigation scrolls to the start (left) on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            const tabNav = document.getElementById('tab-navigation-scroll');
+            if (tabNav) {
+                tabNav.scrollLeft = 0;
+            }
+        });
+
+        // Function to switch tabs
+        function switchTab(tabName) {
+            // Hide all tab contents
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Remove active class from all tab buttons
+            const tabButtons = document.querySelectorAll('.tab-button');
+            tabButtons.forEach(button => {
+                button.classList.remove('active');
+                button.classList.add('text-gray-700', 'hover:bg-gray-200');
+            });
+
+            // Show selected tab content
+            const selectedTab = document.getElementById(tabName + '-tab');
+            if (selectedTab) {
+                selectedTab.classList.add('active');
+            }
+
+            // Add active class to clicked button
+            const activeButton = event.target;
+            activeButton.classList.add('active');
+            activeButton.classList.remove('text-gray-700', 'hover:bg-gray-200');
+
+            // Scroll to top of page
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            // On mobile, scroll the clicked tab button into view
+            if (window.innerWidth < 768) {
+                activeButton.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            }
+        }
+    </script>
 
     <!-- SKILLS TAB -->
     <div id="skills-tab" class="tab-content">
