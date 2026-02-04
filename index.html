@@ -57,6 +57,21 @@
             background: linear-gradient(to right, #2563eb, #7c3aed);
             color: white;
         }
+        /* Tab navigation scroll container */
+        #tab-navigation-scroll {
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        #tab-navigation-scroll::-webkit-scrollbar {
+            display: none;
+        }
+        /* On mobile, start tabs from left */
+        @media (max-width: 768px) {
+            #tab-navigation-scroll {
+                justify-content: flex-start !important;
+            }
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-gray-900 antialiased selection:bg-primary selection:text-white">
@@ -815,35 +830,58 @@
     </footer>
 
     <script>
+        // Reset scroll to left on page load for mobile
+        document.addEventListener('DOMContentLoaded', function() {
+            var tabNav = document.getElementById('tab-navigation-scroll');
+            if (tabNav) {
+                tabNav.scrollLeft = 0;
+            }
+        });
+
+        // Also on window load (backup for full render)
+        window.addEventListener('load', function() {
+            var tabNav = document.getElementById('tab-navigation-scroll');
+            if (tabNav) {
+                setTimeout(function() {
+                    tabNav.scrollLeft = 0;
+                }, 50);
+            }
+        });
+
         function switchTab(tabName) {
             // Hide all tab contents
-            const tabContents = document.querySelectorAll('.tab-content');
-            tabContents.forEach(content => {
+            var tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(function(content) {
                 content.classList.remove('active');
             });
 
             // Remove active class from all tab buttons
-            const tabButtons = document.querySelectorAll('.tab-button');
-            tabButtons.forEach(button => {
+            var tabButtons = document.querySelectorAll('.tab-button');
+            tabButtons.forEach(function(button) {
                 button.classList.remove('active');
                 button.classList.add('text-gray-700', 'hover:bg-gray-200');
                 button.classList.remove('text-white');
             });
 
             // Show selected tab content
-            const selectedTab = document.getElementById(tabName + '-tab');
+            var selectedTab = document.getElementById(tabName + '-tab');
             if (selectedTab) {
                 selectedTab.classList.add('active');
             }
 
             // Highlight selected tab button
-            const selectedButton = event.target;
+            var selectedButton = event.target;
             selectedButton.classList.add('active');
             selectedButton.classList.remove('text-gray-700', 'hover:bg-gray-200');
             selectedButton.classList.add('text-white');
 
             // Scroll to top
             window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            // On mobile, scroll the active tab into view
+            if (window.innerWidth <= 768) {
+                selectedButton.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+            }
         }
     </script>
 
