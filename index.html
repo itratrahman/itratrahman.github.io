@@ -302,51 +302,6 @@
     </div>
     <!-- END CAREER BIO TAB -->
 
-    <script>
-        // Ensure tab navigation scrolls to the start (left) on page load
-        window.addEventListener('DOMContentLoaded', function() {
-            const tabNav = document.getElementById('tab-navigation-scroll');
-            if (tabNav) {
-                tabNav.scrollLeft = 0;
-            }
-        });
-
-        // Function to switch tabs
-        function switchTab(tabName) {
-            // Hide all tab contents
-            const tabContents = document.querySelectorAll('.tab-content');
-            tabContents.forEach(content => {
-                content.classList.remove('active');
-            });
-
-            // Remove active class from all tab buttons
-            const tabButtons = document.querySelectorAll('.tab-button');
-            tabButtons.forEach(button => {
-                button.classList.remove('active');
-                button.classList.add('text-gray-700', 'hover:bg-gray-200');
-            });
-
-            // Show selected tab content
-            const selectedTab = document.getElementById(tabName + '-tab');
-            if (selectedTab) {
-                selectedTab.classList.add('active');
-            }
-
-            // Add active class to clicked button
-            const activeButton = event.target;
-            activeButton.classList.add('active');
-            activeButton.classList.remove('text-gray-700', 'hover:bg-gray-200');
-
-            // Scroll to top of page
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-
-            // On mobile, scroll the clicked tab button into view
-            if (window.innerWidth < 768) {
-                activeButton.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-            }
-        }
-    </script>
-
     <!-- SKILLS TAB -->
     <div id="skills-tab" class="tab-content">
     <section class="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50">
@@ -848,7 +803,8 @@
             }
         });
 
-        function switchTab(tabName) {
+        // Switch tab programmatically (used for hash navigation)
+        function switchTabByName(tabName) {
             // Hide all tab contents
             var tabContents = document.querySelectorAll('.tab-content');
             tabContents.forEach(function(content) {
@@ -869,20 +825,53 @@
                 selectedTab.classList.add('active');
             }
 
-            // Highlight selected tab button
-            var selectedButton = event.target;
-            selectedButton.classList.add('active');
-            selectedButton.classList.remove('text-gray-700', 'hover:bg-gray-200');
-            selectedButton.classList.add('text-white');
+            // Find and highlight the correct tab button
+            tabButtons.forEach(function(button) {
+                if (button.getAttribute('onclick') && button.getAttribute('onclick').includes("'" + tabName + "'")) {
+                    button.classList.add('active');
+                    button.classList.remove('text-gray-700', 'hover:bg-gray-200');
+                    button.classList.add('text-white');
+                    // On mobile, scroll the active tab into view
+                    if (window.innerWidth <= 768) {
+                        button.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                    }
+                }
+            });
+        }
+
+        // Switch tab from button click (updates hash)
+        function switchTab(tabName) {
+            // Update URL hash without triggering scroll
+            history.pushState(null, null, '#' + tabName);
+            
+            // Switch the tab
+            switchTabByName(tabName);
 
             // Scroll to top
             window.scrollTo({ top: 0, behavior: 'smooth' });
-
-            // On mobile, scroll the active tab into view
-            if (window.innerWidth <= 768) {
-                selectedButton.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-            }
         }
+
+        // Handle browser back/forward navigation
+        window.addEventListener('hashchange', function() {
+            var hash = window.location.hash.substring(1);
+            if (hash) {
+                switchTabByName(hash);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        });
+
+        // Handle initial hash on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            var hash = window.location.hash.substring(1);
+            if (hash) {
+                switchTabByName(hash);
+            }
+            // Ensure tab navigation scrolls to the start (left)
+            var tabNav = document.getElementById('tab-navigation-scroll');
+            if (tabNav) {
+                tabNav.scrollLeft = 0;
+            }
+        });
     </script>
 
 </body>
