@@ -918,7 +918,7 @@
                         y: Math.random() * canvas.height,
                         vx: (Math.random() - 0.5) * 0.5,
                         vy: (Math.random() - 0.5) * 0.5,
-                        radius: Math.random() * 2 + 1
+                        radius: Math.random() * 4 + 2
                     });
                 }
             }
@@ -938,7 +938,7 @@
                             const opacity = (1 - distance / maxDistance) * 0.4;
                             ctx.beginPath();
                             ctx.strokeStyle = `rgba(100, 100, 100, ${opacity})`;
-                            ctx.lineWidth = 0.5;
+                            ctx.lineWidth = 1.5;
                             ctx.moveTo(particles[i].x, particles[i].y);
                             ctx.lineTo(particles[j].x, particles[j].y);
                             ctx.stroke();
