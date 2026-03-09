@@ -961,6 +961,7 @@
             let particles = [];
             const particleCount = 80;
             const maxDistance = 150;
+            let time = 0;
             
             function resize() {
                 canvas.width = window.innerWidth;
@@ -975,7 +976,9 @@
                         y: Math.random() * canvas.height,
                         vx: (Math.random() - 0.5) * 0.5,
                         vy: (Math.random() - 0.5) * 0.5,
-                        radius: Math.random() * 4 + 2
+                        radius: Math.random() * 4 + 2,
+                        opacityPhase: Math.random() * Math.PI * 2,
+                        opacitySpeed: 0.5 + Math.random() * 0.5
                     });
                 }
             }
@@ -1003,16 +1006,18 @@
                     }
                 }
                 
-                // Draw particles
+                // Draw particles with continuous opacity animation
                 for (let particle of particles) {
+                    const opacity = 0.4 + 0.4 * Math.sin(time * particle.opacitySpeed + particle.opacityPhase);
                     ctx.beginPath();
                     ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
-                    ctx.fillStyle = 'rgba(80, 80, 80, 0.7)';
+                    ctx.fillStyle = `rgba(80, 80, 80, ${opacity})`;
                     ctx.fill();
                 }
             }
             
             function update() {
+                time += 0.02;
                 for (let particle of particles) {
                     particle.x += particle.vx;
                     particle.y += particle.vy;
