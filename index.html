@@ -565,13 +565,23 @@
                     <h3 class="text-lg font-bold text-gray-900">Document Verification Application of EU Driving License 
                         <a href="https://github.com/itratrahman/document_verification" target="_blank" class="text-primary hover:text-gray-600 text-sm font-normal" title="View Repository"><i class="fab fa-github"></i> Repo</a>
                     </h3>
-                    <ul class="text-sm text-gray-700 space-y-2 list-disc list-inside ml-2">
-                        <li>Built a production-ready AI document verification system with 3-stage pipeline: EfficientNet-B0 binary classifier → PaddleOCR marker validation → RetinaFace detection</li>
-                        <li>Achieved 95% end-to-end accuracy and <2s inference time</li>
-                        <li>Trained models on 3,866 images achieving 97% validation F1 score with Optuna hyperparameter optimization and MLflow tracking</li>
-                        <li>Productionized with FastAPI + async MongoDB logging + Docker</li>
-                        <li>Implemented thread-safe inference, hot model reloading, and comprehensive health checks with pytest integration</li>
-                    </ul>
+                    <p class="text-sm text-gray-700">A full-stack machine learning solution combining EfficientNet-B0 deep learning, PaddleOCR text extraction, and RetinaFace facial detection to authenticate EU Driving Licenses with 95% end-to-end accuracy and &lt;2 second inference time.</p>
+                    <div class="text-sm text-gray-700">
+                        <p class="font-semibold mb-2">Three-Stage Verification Pipeline:</p>
+                        <ul class="space-y-2 list-disc list-inside ml-2 mb-4">
+                            <li><strong>Deep Learning Classification</strong> - EfficientNet-B0 binary classifier trained on 3,866 balanced images (3,000 licenses + 866 diverse documents across 11 categories). Achieves 97% validation F1 score using inverse frequency class weighting and transfer learning from ImageNet.</li>
+                            <li><strong>OCR Marker Validation</strong> - PaddleOCR engine extracts and validates all 11 required EU license fields (1, 2, 3, 4a-4d, 5, 7, 8, 9) through normalized text matching and regex patterns to ensure format compliance.</li>
+                            <li><strong>Facial Recognition Check</strong> - RetinaFace detector validates exactly one face is present with appropriate size constraints (2-60% relative area), preventing false positives from multi-face or non-photo documents.</li>
+                        </ul>
+                        <p class="font-semibold mb-2">Production Engineering Highlights:</p>
+                        <ul class="space-y-1 list-none ml-2">
+                            <li>✅ <strong>MLOps Integration:</strong> Bayesian hyperparameter optimization with Optuna (50 trials), MLflow experiment tracking, automated model versioning with F1-score based selection</li>
+                            <li>✅ <strong>Scalable Architecture:</strong> FastAPI REST API with async MongoDB logging, thread-safe inference, health checks, hot-reload model capability</li>
+                            <li>✅ <strong>DevOps Ready:</strong> Docker + docker-compose deployment, comprehensive pytest suite, multi-stage container builds, non-root security</li>
+                            <li>✅ <strong>Performance:</strong> GPU/CPU auto-detection, &lt;2s per image, 8MB size limits, proper memory management</li>
+                            <li>✅ <strong>Observability:</strong> 14 MongoDB indexes, comprehensive audit trails, aggregated performance metrics, real-time monitoring</li>
+                        </ul>
+                    </div>
                 </div>
 
                 <!-- Project 2 -->
@@ -579,12 +589,25 @@
                     <h3 class="text-lg font-bold text-gray-900">Stock Market Agent 
                         <a href="https://github.com/itratrahman/stock_market_agent" target="_blank" class="text-primary hover:text-gray-600 text-sm font-normal" title="View Repository"><i class="fab fa-github"></i> Repo</a>
                     </h3>
-                    <ul class="text-sm text-gray-700 space-y-2 list-disc list-inside ml-2">
-                        <li>Built an AI stock analysis agent with 5-stage pipeline: FMP API data ingestion → NeuralProphet forecasting (5yr daily data, 5 stocks) → 30-day predictions → NewsAPI article extraction with newspaper4k → LangGraph agentic workflow</li>
-                        <li>Implemented conditional state machine routing forecast quality to news summarization</li>
-                        <li>Used Ollama/Llama 3.2 for iterative article synthesis and 3-tier investment recommendations</li>
-                        <li>Outputs tabulated reports with forecast summaries (<300 chars), news digests (<1000 chars), and decision rationale (<200 chars)</li>
-                    </ul>
+                    <p class="text-sm text-gray-700">An AI-powered stock market analysis system combining NeuralProphet time series forecasting, NewsAPI sentiment analysis, and LangGraph agentic workflows to generate automated investment recommendations for top tech stocks with 30-day price predictions and confidence intervals.</p>
+                    <div class="text-sm text-gray-700">
+                        <p class="font-semibold mb-2">Five-Stage Analysis Pipeline:</p>
+                        <ul class="space-y-2 list-disc list-inside ml-2 mb-4">
+                            <li>📈 <strong>Stock Data Ingestion</strong> - Automated fetching of 5-year daily OHLCV data from Financial Modeling Prep API for AAPL, MSFT, NVDA, AMZN, and GOOGL. Outputs NeuralProphet-ready CSV format (ds, y columns).</li>
+                            <li>🤖 <strong>Time Series Forecasting</strong> - NeuralProphet models trained per stock with 100 epochs, 10 changepoints, and yearly seasonality. Leverages PyTorch backend with automatic learning rate optimization.</li>
+                            <li>📊 <strong>Forecast Generation</strong> - 30-day price predictions with upper/lower 95% confidence bounds. Date-stamped CSV outputs enable historical tracking.</li>
+                            <li>📰 <strong>News Intelligence</strong> - NewsAPI integration fetching 100+ articles per company with newspaper4k full-text extraction. Enriched JSON with source, author, images, and complete article text.</li>
+                            <li>🧠 <strong>Agentic Decision Engine</strong> - LangGraph state machine with Ollama/Llama 3.2 LLM analyzes forecasts (&lt;300 char summaries) and news (&lt;1000 char summaries) to output INVEST/AVOID/NEUTRAL recommendations with reasoning.</li>
+                        </ul>
+                        <p class="font-semibold mb-2">Engineering Highlights:</p>
+                        <ul class="space-y-1 list-none ml-2">
+                            <li>✅ <strong>Agentic Architecture:</strong> LangGraph StateGraph with conditional branching, LangChain prompt templates, local LLM inference via Ollama</li>
+                            <li>✅ <strong>Modular Pipeline:</strong> 5 independent scripts with clear data contracts (CSV → Model → Forecast → News → Report)</li>
+                            <li>✅ <strong>Production Ready:</strong> Argument parsing, credential management, error handling, organized output directories</li>
+                            <li>✅ <strong>Reproducibility:</strong> TensorBoard logging per stock, model versioning, timestamped outputs</li>
+                            <li>✅ <strong>Extensible:</strong> Easy to add new stocks, adjust forecast periods, or swap LLM backends</li>
+                        </ul>
+                    </div>
                 </div>
 
                 <!-- Project 3 -->
@@ -592,12 +615,45 @@
                     <h3 class="text-lg font-bold text-gray-900">Codebase of ML Training Program 
                         <a href="https://github.com/itratrahman/data_science_training" target="_blank" class="text-primary hover:text-gray-600 text-sm font-normal" title="View Repository"><i class="fab fa-github"></i> Repo</a>
                     </h3>
-                    <ul class="text-sm text-gray-700 space-y-2 list-disc list-inside ml-2">
-                        <li>Built a comprehensive data science training curriculum with 50+ Jupyter notebooks covering 7 ML domains</li>
-                        <li>Implemented 15+ algorithms from scratch in NumPy including linear/logistic regression, decision trees, KNN, Naive Bayes, and PCA</li>
-                        <li>Developed modular ML library with gradient descent optimization and L1/L2 regularization</li>
-                        <li>Created utilities for preprocessing, model selection, and evaluation</li>
-                    </ul>
+                    <p class="text-sm text-gray-700">Comprehensive hands-on curriculum combining mathematical foundations with practical ML implementations. From-scratch algorithm development using custom educational library (m_learn). 7 progressive modules with 40+ Jupyter notebooks covering core data science concepts.</p>
+                    <div class="text-sm text-gray-700">
+                        <p class="font-semibold mb-2">Technical Stack:</p>
+                        <ul class="space-y-1 list-disc list-inside ml-2 mb-4">
+                            <li>Python 3.7+ with NumPy, Pandas, Matplotlib, Seaborn</li>
+                            <li>Jupyter notebooks for interactive learning</li>
+                            <li>Custom NumPy-based ML library (no external ML frameworks)</li>
+                        </ul>
+                        <p class="font-semibold mb-2">Key Modules:</p>
+                        <ul class="space-y-1 list-disc list-inside ml-2 mb-4">
+                            <li>🧱 <strong>Foundations:</strong> Python, NumPy, Pandas, data visualization essentials</li>
+                            <li>📈 <strong>Regression:</strong> Linear, Ridge, Lasso with bias-variance analysis and regularization</li>
+                            <li>🏷️ <strong>Classification:</strong> Logistic regression, binary/multiclass, mini-batch gradient descent</li>
+                            <li>🔍 <strong>Non-Parametric:</strong> KNN, kernel regression, bandwidth optimization</li>
+                            <li>🎲 <strong>Probabilistic Models:</strong> Gaussian Naive Bayes, spam detection, sentiment analysis</li>
+                            <li>🌳 <strong>Tree Methods:</strong> CART algorithm, hyperparameter tuning, decision boundaries</li>
+                            <li>📉 <strong>Dimensionality Reduction:</strong> PCA with eigendecomposition, feature compression</li>
+                        </ul>
+                        <p class="font-semibold mb-2">Implementation Highlights:</p>
+                        <ul class="space-y-1 list-disc list-inside ml-2 mb-4">
+                            <li>Built 15+ ML algorithms from scratch without scikit-learn</li>
+                            <li>Custom implementations: regression models, classifiers, clustering, PCA</li>
+                            <li>Utility modules: data preprocessing, cross-validation, performance metrics</li>
+                            <li>Real-world datasets: housing prices, insurance risk prediction</li>
+                        </ul>
+                        <p class="font-semibold mb-2">Learning Outcomes:</p>
+                        <ul class="space-y-1 list-disc list-inside ml-2 mb-4">
+                            <li>Deep understanding of algorithm mathematics and inner workings</li>
+                            <li>Model evaluation: train-test splits, cross-validation, ROC/precision-recall curves</li>
+                            <li>Hyperparameter optimization and regularization techniques</li>
+                            <li>End-to-end ML pipelines from data exploration to deployment-ready models</li>
+                        </ul>
+                        <p class="font-semibold mb-2">Impact:</p>
+                        <ul class="space-y-1 list-none ml-2">
+                            <li>✅ Educational resource bridging theory and practice</li>
+                            <li>✅ Self-contained modules for independent study or sequential curriculum</li>
+                            <li>✅ Production-quality code with comprehensive documentation</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
