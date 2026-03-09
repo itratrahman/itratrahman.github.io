@@ -976,7 +976,7 @@
                         y: Math.random() * canvas.height,
                         vx: (Math.random() - 0.5) * 0.5,
                         vy: (Math.random() - 0.5) * 0.5,
-                        radius: Math.random() * 4 + 2,
+                        radius: Math.random() * 6 + 4,
                         opacityPhase: Math.random() * Math.PI * 2,
                         opacitySpeed: 0.5 + Math.random() * 0.5
                     });
@@ -998,7 +998,7 @@
                             const opacity = (1 - distance / maxDistance) * 0.4;
                             ctx.beginPath();
                             ctx.strokeStyle = `rgba(100, 100, 100, ${opacity})`;
-                            ctx.lineWidth = 1.5;
+                            ctx.lineWidth = 2.5;
                             ctx.moveTo(particles[i].x, particles[i].y);
                             ctx.lineTo(particles[j].x, particles[j].y);
                             ctx.stroke();
