@@ -69,6 +69,11 @@
             background: linear-gradient(to right, #374151, #1f2937);
             color: white;
         }
+            /* Glowing tainted black border for Professional Summary */
+            .glow-black {
+                border: 1.5px solid #222;
+                box-shadow: 0 0 12px 2px rgba(30,30,30,0.45), 0 0 0 4px rgba(0,0,0,0.08);
+            }
         /* Tab navigation scroll container */
         #tab-navigation-scroll {
             -webkit-overflow-scrolling: touch;
@@ -149,15 +154,15 @@
 
     <!-- ABOUT TAB -->
     <div id="about-tab" class="tab-content active">
-    <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+    <section class="py-8 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
         <!-- Profile Picture -->
-        <div class="flex justify-center mb-12 relative">
+        <div class="flex justify-center mb-6 relative">
             <div class="absolute inset-0 bg-gray-400 opacity-10 blur-3xl rounded-full"></div>
-            <img src="https://github.com/itratrahman/itratrahman.github.io/blob/main/profile_pic.jpg?raw=true" alt="Itrat Rahman" class="relative w-72 h-72 md:w-84 md:h-84 rounded-full object-cover border-4 border-gray-200 shadow-2xl">
+            <img src="https://github.com/itratrahman/itratrahman.github.io/blob/main/profile_pic.jpg?raw=true" alt="Itrat Rahman" class="relative w-56 h-56 md:w-64 md:h-64 rounded-full object-cover border-4 border-gray-200 shadow-2xl">
         </div>
         
         <!-- Centered Content -->
-        <div class="max-w-5xl mx-auto space-y-6">
+        <div class="max-w-5xl mx-auto space-y-4">
             <div class="flex justify-center">
                 <div class="inline-flex flex-wrap items-center gap-2 text-xs font-semibold tracking-wider uppercase">
                 <span class="px-3 py-1 text-gray-700 bg-gray-300/30 rounded-full flex items-center gap-2">
@@ -169,7 +174,7 @@
                     Relocatable across US
                 </div>
             </div>
-            <h1 class="text-5xl md:text-6xl font-bold leading-tight text-gray-900 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold leading-tight text-gray-900 text-center">
                 Engineering <br>
                 <span class="gradient-text">Intelligent Futures</span>
             </h1>
@@ -182,8 +187,8 @@
                     <span>UCL MEng, First Class Honours (All 4 years)</span>
                 </div>
                 <div class="flex items-center gap-2">
-                    <i class="fas fa-robot text-accent"></i>
-                    <span>AI across fintech, telecom, banking, chemical & robotics domains</span>
+                    <i class="fas fa-file-alt text-accent"></i>
+                    <span><a href="https://itratrahman.github.io/resume/" target="_blank" class="hover:text-primary">Single Page Resume</a></span>
                 </div>
                 <div class="flex items-center gap-2">
                     <i class="fas fa-phone text-accent"></i>
@@ -193,9 +198,17 @@
                     <i class="fas fa-envelope text-accent"></i>
                     <span><a href="mailto:rahmanitrat@gmail.com" class="hover:text-primary">rahmanitrat@gmail.com</a></span>
                 </div>
+                <div class="flex items-center gap-2">
+                    <i class="fab fa-github text-accent"></i>
+                    <span><a href="https://github.com/itratrahman" target="_blank" class="hover:text-primary">github.com/itratrahman</a></span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fab fa-linkedin text-accent"></i>
+                    <span><a href="https://linkedin.com/in/itratrahman" target="_blank" class="hover:text-primary">linkedin.com/in/itratrahman</a></span>
+                </div>
             </div>
 
-            <div class="glass-card p-4 rounded-2xl mt-2">
+            <div class="glass-card glow-black p-4 rounded-2xl mt-2">
                 <h3 class="text-sm font-semibold mb-2 text-gray-900 tracking-wide uppercase">Professional Summary</h3>
                 <ul class="text-xs sm:text-sm text-gray-700 space-y-1.5 list-disc list-inside">
                     <li>🚀 <strong>Senior AI Engineer/Data Scientist</strong> with over 9 years of technical experience with expertise in Computer Vision, NLP, LLM, GenAI, Chatbot, Agentic AI, MLOps, Cloud Technologies, Big Data Analytics, and Data Science
@@ -219,17 +232,7 @@
                 </ul>
             </div>
 
-            <div class="pt-4 flex flex-wrap gap-4 justify-center">
-                <a href="https://github.com/itratrahman" target="_blank" class="glass-card px-6 py-3 rounded-lg hover:bg-gray-100 transition flex items-center gap-2 text-gray-700">
-                    <i class="fab fa-github text-xl"></i> GitHub
-                </a>
-                <a href="https://linkedin.com/in/itratrahman" target="_blank" class="glass-card px-6 py-3 rounded-lg hover:bg-gray-100 transition flex items-center gap-2 text-gray-700">
-                    <i class="fab fa-linkedin text-xl"></i> LinkedIn
-                </a>
-                <a href="https://docs.google.com/document/d/1oNbLlHdMvmbokG68S_eV-a0iEZwsJL6AnEls6lPbZVE/edit?usp=drive_link" target="_blank" class="glass-card px-6 py-3 rounded-lg hover:bg-gray-100 transition flex items-center gap-2 text-gray-700">
-                <i class="fas fa-file-alt text-xl"></i> Portfolio
-                </a>
-            </div>
+
         </div>
     </section>
 
